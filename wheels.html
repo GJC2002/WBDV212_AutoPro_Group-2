@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Pro All Terrain & Street Lifestyle - Home</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+</head>
+        
+<body class="page-wheels">
+
+<div class="nav">
+    <img src="./images/companylogo.jpg" alt="Auto Pro Logo" height="100" width="200" style="border-radius: 100%" class="companylogo">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-badge" id="cart-count" style="font-family: Arial, Helvetica, sans-serif;">0</span></a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu">☰</button>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar">
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation menu">×</button>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        </ul>
+    </nav>
+</aside>
+
+    <br>
+    <h1 style="text-align: center;">Wheels</h1>
+    <div class="search-container">
+        <label for="wheel-search">Search wheels:</label>
+        <input type="search" id="wheel-search" name="wheel-search" placeholder="Search by wheel name, size or feature" aria-label="Search wheels products">
+    </div>
+    <div id="no-results-message" class="no-results-message" hidden>No wheels found matching your search.</div>
+    <br>
+    <br>
+
+<div class="flex-product">
+
+    <div class="card">
+        <img src="./images/hyogo.webp" alt="Hyogo" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('hyogo')" onreset="resetoptions('hyogo')">
+          <h2>HYOGO</h2>
+          <ul>
+            <li>17×8.5</li>
+            <li>6 Holes</li>
+            <li>PCD 139.7</li>
+            <li>Offset -10</li>
+          </ul>
+          <p><em>Note: Items are sold per set (4pcs)</em></p>
+          <label for="colors-hyogo">Choose a color:</label>
+          <select id="colors-hyogo">
+            <option value="--select a color--">--Select a color--</option>
+            <option value="nardo grey">Nardo Grey</option>
+            <option value="dark gunmetal">Dark Gunmetal</option>
+            <option value="silver full_machine">Silver Full Machine</option>
+            <option value="bronze">Bronze</option>
+          </select>
+        <span id="color-error-hyogo" class="error_message"></span>
+        <label for="quantity-hyogo">Quantity:</label>
+        <input type="number" id="quantity-hyogo" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-hyogo" class="error_message"></span>
+          <h3>PHP 50,000</h3>
+          <button type="button" onclick="validateoption('hyogo')">Add To Cart</button>
+         </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/Evolution+B.webp" alt="Evolution" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('evolution')" onreset="resetoptions('evolution')">
+            <h2>EVOLUTION</h2>
+            <ul>
+                <li>18×9</li>
+                <li>6 Holes</li>
+                <li>PCD 139.7</li>
+                <li>Offset 0</li>
+            </ul>
+            <p><em>Note: Items are sold per set (4pcs)</em></p>
+            <label for="colors-evolution">Choose a color:</label>
+            <select id="colors-evolution">
+                <option value="--select a color--">--Select a color--</option>
+                <option value="dark gunmetal">Dark Gunmetal</option>
+                <option value="silver full_machine">Silver Machine</option>
+            </select>
+            <span id="color-error-evolution" class="error_message"></span>
+            <label for="quantity-evolution">Quantity:</label>
+            <input type="number" id="quantity-evolution" name="quantity" min="1" max="50" value="0">
+            <span id="quantity-error-evolution" class="error_message"></span>
+            <h3>PHP 52,000</h3>
+          <button type="button" onclick="validateoption('evolution')">Add To Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/Rega+B.webp" alt="Rega" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('rega')" onreset="resetoptions('rega')">
+            <h2>REGA</h2>
+            <ul>
+                <li>18×9</li>
+                <li>6 Holes</li>
+                <li>PCD 139.7 & 114.3</li>
+                <li>Offset 10 & 20</li>
+            </ul>
+            <p><em>Note: Items are sold per set (4pcs)</em></p>
+            <label for="colors-rega">Choose a color:</label>
+            <select id="colors-rega">
+                <option value="--select a color--">--Select a color--</option>
+                <option value="bronze">Bronze</option>
+                <option value="gloss black">Gloss Black</option>
+                <option value="silver machine">Silver Machine</option>
+            </select>
+            <span id="color-error-rega" class="error_message"></span>
+            <label for="quantity-rega">Quantity:</label>
+            <input type="number" id="quantity-rega" name="quantity" min="1" max="50" value="0">
+            <span id="quantity-error-rega" class="error_message"></span>
+            <br>
+            <h3>PHP 52,000</h3>
+            <button type="button" onclick="validateoption('rega')">Add To Cart</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/Tokushima.webp" alt="Tokushima" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('tokushima')" onreset="resetoptions('tokushima')">
+            <h2>TOKUSHIMA</h2>
+            <ul>
+                <li>17×8.5</li>
+                <li>6 Holes</li>
+                <li>PCD 139.7</li>
+                <li>Offset -10</li>
+            </ul>
+            <p><em>Note: Items are sold per set (4pcs)</em></p>
+            <label for="colors-tokushima">Choose a color:</label>
+            <select id="colors-tokushima">
+                <option value="--select a color--">--Select a color--</option>
+                <option value="satin silver">Satin Silver</option>
+                <option value="super finish">Super Finish</option>
+                <option value="satin dark gunmetal">Satin Dark Gunmetal</option>
+                <option value="satin bronze">Satin Bronze</option>
+                <option value="satin black">Satin Black</option>
+            </select>
+            <span id="color-error-tokushima" class="error_message"></span>
+            <label for="quantity-tokushima">Quantity:</label>
+            <input type="number" id="quantity-tokushima" name="quantity" min="1" max="50" value="0">
+            <span id="quantity-error-tokushima" class="error_message"></span>
+            <br>
+            <h3>PHP 50,000</h3>
+            <button type="button" onclick="validateoption('tokushima')">Add To Cart</button>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="flex-product">
+
+    <div class="card">
+        <img src="./images/Y-A.webp" alt="Yagamata" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('yagamata')" onreset="resetoptions('yagamata')">
+            <h2>YAGAMATA</h2>
+            <ul>
+                <li>17×8.5</li>
+                <li>6 Holes</li>
+                <li>PCD 139.7</li>
+                <li>Offset -6</li>
+            </ul>
+            <p><em>Note: Items are sold per set (4pcs)</em></p>
+            <label for="colors-yagamata">Choose a color:</label>
+            <select id="colors-yagamata">
+                <option value="--select a color--">--Select a color--</option>
+                <option value="gunmetal black clear coating">Gunmetal Black Clear Coating</option>
+                <option value="black vaccum chrome">Black Vacuum Chrome</option>
+                <option value="satin bronze">Satin Bronze</option>
+                <option value="silver machine">Silver Machine</option>
+            </select>
+            <span id="color-error-yagamata" class="error_message"></span>
+            <label for="quantity-yagamata">Quantity:</label>
+            <input type="number" id="quantity-yagamata" name="quantity" min="1" max="50" value="0">
+                <span id="quantity-error-yagamata" class="error_message"></span>
+                <br>
+            <h3>PHP 50, 000</h3>
+            <button type="button" onclick="validateoption('yagamata')">Add To Cart</button> 
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/GR6+A.webp" alt="GR 6" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('gr6')" onreset="resetoptions('gr6')">
+            <h2>GR 6</h2>
+            <ul>
+                <li>18×9</li>
+                <li>6 Holes</li>
+                <li>PCD 139.7</li>
+                <li>Offset 0</li>
+            </ul>
+            <p><em>Note: Items are sold per set (4pcs)</em></p>
+            <label for="colors-gr6">Choose a color:</label>
+            <select id="colors-gr6">
+                <option value="--select a color--">--Select a color--</option>
+                <option value="machine polish">Machine Polish</option>
+                <option value="mist gray">Mist Gray</option>
+                <option value="black vacuum chrome">Black Vacuum Chrome</option>
+                <option value="matte black face gloss">Matte Black Face Gloss</option>
+            </select>
+            <span id="color-error-gr6" class="error_message"></span>
+            <label for="quantity-gr6">Quantity:</label>
+            <input type="number" id="quantity-gr6" name="quantity" min="1" max="50" value="0">
+            <span id="quantity-error-gr6" class="error_message"></span>
+            <br>
+            <h3>PHP 52,000</h3>
+            <button type="button" onclick="validateoption('gr6')">Add To Cart</button> 
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/Toyama.webp" alt="Toyama" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('toyama')" onreset="resetoptions('toyama')">
+            <h2>Toyama</h2>
+            <ul>
+                <li>18x9</li>
+                <li>6 Holes</li>
+                <li>PCD 139.7</li>
+                <li>Offset 0</li>
+            </ul>
+            <p><em>Note: Items are sold per set (4pcs)</em></p>
+                <label for="colors-toyama">Choose a color:</label>
+                <select id="colors-toyama">
+                    <option value="--select a color--">--Select a color--</option>
+                    <option value="gloss gunmetal">Gloss Gunmetal</option>
+                    <option value="gunmetal">Gunmetal</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="black">Black</option>
+                </select>
+                <span id="color-error-toyama" class="error_message"></span>
+                <label for="quantity-toyama">Quantity:</label>
+                <input type="number" id="quantity-toyama" name="quantity" min="1" max="50" value="0">
+                <span id="quantity-error-toyama" class="error_message"></span>
+                <br>
+            <h3>PHP 52,000</h3>
+            <button type="button" onclick="validateoption('toyama')">Add To Cart</button> 
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/Wakayama.webp" alt="Wakayama" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('wakayama')" onreset="resetoptions('wakayama')">
+            <h2>Wakayama</h2>
+            <ul>
+                <li>20×8.5</li>
+                <li>6 Holes</li>
+                <li>PCD 139.7</li>
+                <li>Offset 18</li>
+            </ul>
+            <p><em>Note: Items are sold per set (4pcs)</em></p>
+            <label for="colors-wakayama">Choose a color:</label>
+            <select id="colors-wakayama">
+                <option value="--select a color--">--Select a color--</option>
+                <option value="black machine face">Black Machine Face</option>
+                <option value="gloss black">Gloss Black</option>
+                <option value="silver machine full face">Satin Silver Machine Full Face</option>
+            </select>
+            <span id="color-error-wakayama" class="error_message"></span>
+            <label for="quantity-wakayama">Quantity:</label>
+            <input type="number" id="quantity-wakayama" name="quantity" min="1" max="50" value="0">
+            <span id="quantity-error-wakayama" class="error_message"></span>
+            <br>
+            <h3>PHP 62,000</h3>
+            <button type="button" onclick="validateoption('wakayama')">Add To Cart</button> 
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="flex-product">
+
+    <div class="card">
+        <img src="./images/SR110+A.webp" alt="Swagg" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('swagg')" onreset="resetoptions('swagg')">
+            <h2>SWAGG</h2>
+            <ul>
+                <li>22x9.5</li>
+                <li>6 Holes</li>
+                <li>PCD 139.7</li>
+                <li>Offset 25</li>
+            </ul>
+            <p><em>Note: Items are sold per set (4pcs)</em></p>
+            <label for="colors-swagg">Choose a color:</label>
+            <select id="colors-swagg">
+                <option value="--select a color--">--Select a color--</option>
+                <option value="gloss black">Gloss Black</option>
+                <option value="hyper black">Hyper Black</option>
+                <option value="hyper silver">Hyper Silver</option>
+            </select>
+            <span id="color-error-swagg" class="error_message"></span>
+            <label for="quantity-swagg">Quantity:</label>
+            <input type="number" id="quantity-swagg" name="quantity" min="1" max="50" value="0">
+            <span id="quantity-error-swagg" class="error_message"></span>
+            <br>
+            <h3>PHP 76,800</h3>
+            <button type="button" onclick="validateoption('swagg')">Add To Cart</button> 
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/Aomori.webp" alt="Aomori" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('aomori')" onreset="resetoptions('aomori')">
+            <h2>AOMORI</h2>
+            <ul>
+                <li>18x9</li>
+                <li>6 Holes</li>
+                <li>PCD 139.7</li>
+                <li>Offset 0</li>
+            </ul>
+            <p><em>Note: Items are sold per set (4pcs)</em></p>
+            <label for="colors-aomori">Choose a color:</label>
+            <select id="colors-aomori">
+                <option value="--select a color--">--Select a color--</option>
+                <option value="satin dark bronze">Satin Dark Bronze</option>
+                <option value="glossy black machine spoke">Glossy Black Machine Spoke</option>
+                <option value="satin dark gunmetal">Satin Dark Gunmetal</option>
+            </select>
+            <span id="color-error-aomori" class="error_message"></span>
+            <label for="quantity-aomori">Quantity:</label>
+            <input type="number" id="quantity-aomori" name="quantity" min="1" max="50" value="0">
+            <span id="quantity-error-aomori" class="error_message"></span>
+            <br>
+            <h3>PHP 52,000</h3>
+            <button type="button" onclick="validateoption('aomori')">Add To Cart</button> 
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/Akita.webp" alt="Akita" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('akita')" onreset="resetoptions('akita')">
+            <h2>AKITA</h2>
+            <ul>
+                <li>18x9</li>
+                <li>6 Holes</li>
+                <li>PCD 139.7</li>
+                <li>Offset 0</li>
+            </ul>
+            <p><em>Note: Items are sold per set (4pcs)</em></p>
+            <label for="quantity-akita">Quantity:</label>
+            <input type="number" id="quantity-akita" name="quantity" min="1" max="50" value="0">
+            <span id="quantity-error-akita" class="error_message"></span>
+            <br>
+            <h3>PHP 52,000</h3>
+            <button type="button" onclick="validateoption('akita')">Add To Cart</button> 
+        </div>
+    </div>
+ 
+    <div class="card">
+        <img src="./images/14152+A.webp" alt="Tanker" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('tanker')" onreset="resetoptions('tanker')">
+            <h2>TANKER</h2>
+            <ul>
+                <li>17x8.5</li>
+                <li>6 Holes</li>
+                <li>PCD 139.7</li>
+                <li>Offset -6</li>
+            </ul>
+            <p><em>Note: Items are sold per set (4pcs)</em></p>
+            <label for="colors-tanker">Choose a color:</label>
+            <select id="colors-tanker">
+                <option value="--select a color--">--Select a color--</option>
+                <option value="tanker-1785-6/139-et6-gn">Tanker-1785-6/139-ET6-GN</option>
+                <option value="tanker-1785-6/139-et-6-hsf">Tanker-1785-6/139-ET-6-HSF</option>
+                <option value="tanker-1785-6/139-et-6-brnze">Tanker-1785-6/139-ET-6-BRNZE</option>
+            </select>
+            <span id="color-error-tanker" class="error_message"></span>
+            <label for="quantity-tanker">Quantity:</label>
+            <input type="number" id="quantity-tanker" name="quantity" min="1" max="50" value="0">
+            <span id="quantity-error-tanker" class="error_message"></span>
+            <br>
+            <h3>PHP 50,000</h3>
+            <button type="button" onclick="validateoption('tanker')">Add To Cart</button> 
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="flex-product">
+
+   <div class="card">
+    <img src="./images/Side+Madness+Silver+139.7.webp" alt="Madness" height="100" width="200">
+    <div class="container" onsubmit="return validateoption('madness')" onreset="resetoptions('madness')">
+          <h2>MADNESS</h2>
+          <ul>
+              <li>18x9</li>
+              <li>6 Holes</li>
+              <li>PCD 139.7</li>
+              <li>Offset 0</li>
+          </ul>
+          <p><em>Note: Items are sold per set (4pcs)</em></p>
+          <label for="quantity-madness">Quantity:</label>
+          <input type="number" id="quantity-madness" name="quantity" min="1" max="50" value="0">
+          <span id="quantity-error-madness" class="error_message"></span>
+          <br>
+          <h3>PHP 52,000</h3>
+          <button type="button" onclick="validateoption('madness')">Add To Cart</button> 
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./images/Kyogo.webp" alt="Kyogo" height="100" width="200">
+    <div class="container" onsubmit="return validateoption('kyogo')" onreset="resetoptions('kyogo')">
+          <h2>KYOGO</h2>
+          <ul>
+              <li>17x9</li>
+              <li>6 Holes</li>
+              <li>PCD 139.7</li>
+              <li>Offset 0</li>
+          </ul>
+          <p><em>Note: Items are sold per set (4pcs)</em></p>
+          <label for="quantity-kyogo">Quantity:</label>
+          <input type="number" id="quantity-kyogo" name="quantity" min="1" max="50" value="0">
+          <span id="quantity-error-kyogo" class="error_message"></span>
+          <br>
+          <h3>PHP 50,000</h3>
+          <button type="button" onclick="validateoption('kyogo')">Add To Cart</button> 
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./images/Trek.webp" alt="Trek" height="100" width="200">
+    <div class="container" onsubmit="return validateoption('trek')" onreset="resetoptions('trek')">
+          <h2>TREK</h2>
+          <ul>
+              <li>17x8.5</li>
+              <li>6 Holes</li>
+              <li>PCD 139.7</li>
+              <li>Offset 0</li>
+          </ul>
+          <p><em>Note: Items are sold per set (4pcs)</em></p>
+          <label for="colors-trek">Choose a color:</label>
+            <select id="colors-trek">
+                <option value="--select a color--">--Select a color--</option>
+                <option value="black">Black</option>
+                <option value="gunmetal">Gunmetal</option>
+                <option value="silver">Silver</option>
+            </select>
+            <span id="color-error-trek" class="error_message"></span>
+            <label for="quantity-trek">Quantity:</label>
+            <input type="number" id="quantity-trek" name="quantity" min="1" max="50" value="0">
+            <span id="quantity-error-trek" class="error_message"></span>
+            <br>
+          <h3>PHP 50,000</h3>
+          <button type="button" onclick="validateoption('trek')">Add To Cart</button> 
+    </div>
+  </div>
+
+   <div class="card">
+    <img src="./images/S-A.webp" alt="RS02" height="100" width="200">
+    <div class="container" onsubmit="return validateoption('rs02')" onreset="resetoptions('rs02')">
+          <h2>RS02</h2>
+          <ul>
+              <li>18x8.5</li>
+              <li>10 Holes</li>
+              <li>PCD 100 & 114.3</li>
+              <li>Offset 40</li>
+          </ul>
+          <p><em>Note: Items are sold per set (4pcs)</em></p>
+            <label for="colors-rs02">Choose a color:</label>
+                <select id="colors-rs02">
+                    <option value="--select a color--">--Select a color--</option>
+                    <option value="hyper silver">Hyper Silver</option>
+                    <option value="dark gunmetal">Dark Gunmetal</option>
+                </select>
+                <span id="color-error-rs02" class="error_message"></span>
+                <label for="quantity-rs02">Quantity:</label>
+                <input type="number" id="quantity-rs02" name="quantity" min="1" max="50" value="0">
+                <span id="quantity-error-rs02" class="error_message"></span>
+                <br>
+          <h3>PHP 43,500</h3>
+          <button type="button" onclick="validateoption('rs02')">Add To Cart</button> 
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div class="flex-product">
+
+    <div class="card">
+    <img src="./images/DIRTYLIFE9305G1.webp" alt="Theory 9305" height="100" width="200">
+    <div class="container" onsubmit="return validateoption('theory9305')" onreset="resetoptions('theory9305')">
+          <h2>THEORY 9305</h2>
+          <ul>
+              <li>17x9</li>
+              <li>6 Holes</li>
+              <li>PCD 139.7</li>
+              <li>Offset -12</li>
+          </ul>
+          <p><em>Note: Items are sold per set (4pcs)</em></p>
+          <label for="colors-theory9305">Choose a color:</label>
+            <select id="colors-theory9305">
+                <option value="--select a color--">--Select a color--</option>
+                <option value="matt gold">Matt Gold</option>
+                <option value="matt black">Matt Black</option>
+            </select>
+            <span id="color-error-theory9305" class="error_message"></span>
+            <label for="quantity-theory9305">Quantity:</label>
+            <input type="number" id="quantity-theory9305" name="quantity" min="1" max="50" value="0">
+            <span id="quantity-error-theory9305" class="error_message"></span>
+            <br>
+          <h3>PHP 50,000</h3>
+          <button type="button" onclick="validateoption('theory9305')">Add To Cart</button> 
+    </div>
+  </div>
+
+    <div class="card">
+    <img src="./images/8-A.webp" alt="Axis 8" height="100" width="200">
+    <div class="container" onsubmit="return validateoption('axis8')" onreset="resetoptions('axis8')">
+          <h2>AXIS 8</h2>
+          <ul>
+              <li>20x8.5</li>
+              <li>6 Holes</li>
+              <li>PCD 139.7</li>
+              <li>Offset 15</li>
+          </ul>
+          <p><em>Note: Items are sold per set (4pcs)</em></p>
+          <label for="quantity-axis8">Quantity:</label>
+          <input type="number" id="quantity-axis8" name="quantity" min="1" max="50" value="0">
+          <span id="quantity-error-axis8" class="error_message"></span>
+          <br>
+          <h3>PHP 62,000</h3>
+          <button type="button" onclick="validateoption('axis8')">Add To Cart</button> 
+    </div>
+  </div>
+
+    <div class="card">
+    <img src="./images/RB-A.webp" alt="Roadkill Beadlock" height="100" width="200">
+    <div class="container" onsubmit="return validateoption('roadkill')" onreset="resetoptions('roadkill')">
+          <h2>ROADKILL BEADLOCK</h2>
+          <ul>
+              <li>17x9</li>
+              <li>5 & 6 Holes</li>
+              <li>PCD 127 & 139.7</li>
+              <li>Offset -14</li>
+          </ul>
+          <p><em>Note: Items are sold per set (4pcs)</em></p>
+              <label for="colors-roadkill">Choose a color:</label>
+              <select id="colors-roadkill">
+                  <option value="--select a color--">--Select a color--</option>
+                  <option value="machine face">Machine Face</option>
+                  <option value="matt black">Matt Black</option>
+              </select>
+              <span id="color-error-roadkill" class="error_message"></span>
+                <label for="quantity-roadkill">Quantity:</label>
+                <input type="number" id="quantity-roadkill" name="quantity" min="1" max="50" value="0">
+                <span id="quantity-error-roadkill" class="error_message"></span>
+          <br>
+          <h3>PHP 79,000</h3>
+          <button type="button" onclick="validateoption('roadkill')">Add To Cart</button> 
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="./images/ION-A.webp" alt="Ion 189" height="100" width="200">
+    <div class="container" onsubmit="return validateoption('ion189')" onreset="resetoptions('ion189')">
+          <h2>ION 189</h2>
+          <ul>
+              <li>20x9</li>
+              <li>6 Holes</li>
+              <li>PCD 139.7</li>
+              <li>Offset 18</li>
+          </ul>
+          <p><em>Note: Items are sold per set (4pcs)</em></p>
+          <label for="quantity-ion189">Quantity:</label>
+          <input type="number" id="quantity-ion189" name="quantity" min="1" max="50" value="0">
+          <span id="quantity-error-ion189" class="error_message"></span>
+          <br>
+          <h3>PHP 62,000</h3>
+          <button type="button" onclick="validateoption('ion189')">Add To Cart</button> 
+    </div>
+   </div>
+   </div>
+
+
+<footer class="footer">
+
+    <div class="footer-left">
+        <h2>AUTOPRO</h2>
+        <p>All Terrain & Street Lifestyle</p>
+    </div>
+
+    <div class="footer-center">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Products.html">Products</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+        <a href="faq.html">FAQ</a>
+    </div>
+
+    <div class="footer-right" style="display:flex; flex-direction:row !important; justify-content:center; gap:25px; align-items:center;">
+
+        <a href="https://www.facebook.com/autoprolifestyle" target="_blank" class="social-media">
+            <i class="fa-brands fa-square-facebook"></i>
+        </a>
+
+        <a href="https://www.instagram.com/autopro_lifestyle/" target="_blank" class="social-media">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@autoprolifestyle" target="_blank" class="social-media">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+    </div>
+
+</footer>
+
+<div class="footer-bottom">
+    © 2024 AUTOPRO ALL TERRAIN & STREET LIFESTYLE
+</div>
+
+
+<script src="https://kit.fontawesome.com/f50125bc94.js" crossorigin="anonymous"></script>
+
+<script>
+function showNotification(message) {
+    let notif = document.getElementById('cart-notification');
+    if (!notif) {
+        notif = document.createElement('div');
+        notif.id = 'cart-notification';
+        notif.style.position = 'fixed';
+        notif.style.top = '80px';
+        notif.style.right = '20px';
+        notif.style.padding = '12px 16px';
+        notif.style.backgroundColor = '#4CAF50';
+        notif.style.color = '#fff';
+        notif.style.borderRadius = '8px';
+        notif.style.boxShadow = '0 2px 10px rgba(0,0,0,0.15)';
+        notif.style.zIndex = '9999';
+        notif.style.opacity = '0';
+        notif.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+        notif.style.transform = 'translateY(-10px)';
+        document.body.appendChild(notif);
+    }
+    notif.textContent = message;
+    notif.style.display = 'block';
+    requestAnimationFrame(() => {
+        notif.style.opacity = '1';
+        notif.style.transform = 'translateY(0)';
+    });
+    clearTimeout(window._cartNotificationTimeout);
+    window._cartNotificationTimeout = setTimeout(() => {
+        notif.style.opacity = '0';
+        notif.style.transform = 'translateY(-10px)';
+        setTimeout(() => notif.style.display = 'none', 250);
+    }, 2600);
+}
+
+function updateCartBadge() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || {};
+    const count = Object.values(cart).reduce((sum, item) => sum + (Number(item.quantity) || 0), 0);
+    const badge = document.getElementById('cart-count');
+    if (!badge) return;
+    if (count > 0) {
+        badge.textContent = count;
+        badge.style.display = 'flex';
+    } else {
+        badge.style.display = 'none';
+    }
+}
+
+function generateCartKey(productId, options) {
+    let key = productId;
+    if (options.color) key += '_' + options.color.replace(/\s+/g, '_');
+    if (options.size) key += '_' + options.size.replace(/\s+/g, '_');
+    if (options.model) key += '_' + options.model.replace(/\s+/g, '_');
+    if (options.brand) key += '_' + options.brand.replace(/\s+/g, '_');
+    if (options.description) key += '_' + options.description.replace(/\s+/g, '_');
+    if (options.area) key += '_' + options.area.replace(/\s+/g, '_');
+    if (options.part) key += '_' + options.part.replace(/\s+/g, '_');
+    return key;
+}
+
+function getSelectValues(selectEl, ignoreValues = []) {
+    if (!selectEl) return null;
+    return Array.from(selectEl.options)
+        .map(option => option.value)
+        .filter(value => value && !ignoreValues.includes(value));
+}
+
+function validateoption(productId) {
+    const colorEl = document.getElementById(`colors-${productId}`);
+    const colorErr = document.getElementById(`color-error-${productId}`);
+    const quantityEl = document.getElementById(`quantity-${productId}`);
+    const quantityErr = document.getElementById(`quantity-error-${productId}`);
+
+    if (colorErr) {
+        colorErr.textContent = "";
+    }
+    if (quantityErr) {
+        quantityErr.textContent = "";
+    }
+
+    let optionValid = true;
+
+    if (colorEl && colorErr) {
+        const colors = colorEl.value;
+        if (colors === "--select a color--" || colors.trim() === "") {
+            colorErr.textContent = "Please select a color.";
+            optionValid = false;
+        }
+    }
+
+    if (quantityEl && quantityErr) {
+        const quantity = Number(quantityEl.value);
+        if (!Number.isInteger(quantity) || quantity < 1) {
+            quantityErr.textContent = "Quantity must be 1 or more.";
+            optionValid = false;
+        } else if (quantity > 50) {
+            quantityErr.textContent = "Maximum Order per product is 50 pcs only. For Bulk Orders, please proceed to contact page.";
+            optionValid = false;
+        }
+    }
+
+    if (optionValid) {
+       
+        const cart = JSON.parse(localStorage.getItem('cart')) || {};
+        const options = {
+            color: colorEl ? colorEl.value : null
+        };
+        const cartKey = generateCartKey(productId, options);
+        const item = {
+            productId: productId,
+            quantity: Number(quantityEl.value),
+            color: colorEl ? colorEl.value : null,
+            size: null,
+            model: null,
+            brand: null,
+            description: null,
+            area: null,
+            part: null,
+            colorOptions: getSelectValues(colorEl, ['--select a color--']),
+            sizeOptions: null,
+            modelOptions: null,
+            brandOptions: null,
+            descriptionOptions: null,
+            areaOptions: null,
+            partOptions: null 
+        };
+        if (cart[cartKey]) {
+            cart[cartKey].quantity += item.quantity;
+        } else {
+            cart[cartKey] = item;
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartBadge();
+        showNotification("Item added to cart!");
+
+        if (colorEl) {
+            colorEl.value = "--select a color--";
+        }
+        if (quantityEl) {
+            quantityEl.value = "0";
+        }
+        return true;
+    }
+    return false;
+}
+
+function resetoptions(productId) {
+    const colorErr = document.getElementById(`color-error-${productId}`);
+    const quantityErr = document.getElementById(`quantity-error-${productId}`);
+
+    if (colorErr) {
+        colorErr.textContent = "";
+    }
+    if (quantityErr) {
+        quantityErr.textContent = "";
+    }
+}
+   
+    const sidebar = document.getElementById('sidebar');
+    updateCartBadge();
+    const searchInput = document.getElementById('wheel-search');
+
+    function filterWheels() {
+        const query = (searchInput?.value || '').trim().toLowerCase();
+        const cards = document.querySelectorAll('.flex-product .card');
+        let visibleCount = 0;
+        cards.forEach(card => {
+            const title = card.querySelector('h2')?.textContent.toLowerCase() || '';
+            const details = card.querySelector('ul')?.textContent.toLowerCase() || '';
+            const visible = !query || title.includes(query) || details.includes(query);
+            card.style.display = visible ? '' : 'none';
+            if (visible) visibleCount += 1;
+        });
+        const noResults = document.getElementById('no-results-message');
+        if (noResults) {
+            noResults.hidden = visibleCount > 0;
+        }
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('input', filterWheels);
+        filterWheels();
+    }
+
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const navToggle = document.getElementById('navToggle');
+    const sidebarClose = document.getElementById('sidebarClose');
+
+    function closeSidebar() {
+        sidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+    }
+
+    navToggle.addEventListener('click', () => {
+        sidebar.classList.add('active');
+        sidebarOverlay.classList.add('active');
+    });
+
+    sidebarClose.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+    
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Pro All Terrain & Street Lifestyle - Cart</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    
+
+    <script src="https://kit.fontawesome.com/f50125bc94.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="page-cart">
+
+<div class="nav">
+    <img src="./images/companylogo.jpg" alt="Auto Pro Logo" height="100" width="200" style="border-radius: 100%" class="companylogo">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-badge" id="cart-count" style="font-family: Arial, Helvetica, sans-serif;">0</span></a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu">☰</button>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar">
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation menu">×</button>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        </ul>
+    </nav>
+</aside>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 style="text-align: center;">Your Shopping Cart</h1>
+<br>
+<br>
+<br>
+
+
+<div class="cart-wrapper">
+
+    <div id="cart-items"></div>
+
+    <div id="cart-total">
+        <h2>Total: PHP <span id="total-price">0.00</span></h2>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="order-form-section" class="contact-form-card" style="max-width: 520px;">
+        <h2>Order Information</h2>
+        <form id="order-form" novalidate>
+            <p>
+                <label for="order-name">Full Name:</label>
+                <input type="text" id="order-name" name="order-name" placeholder="Enter your full name" required>
+            </p>
+            <p>
+                <label for="order-email">Email Address:</label>
+                <input type="email" id="order-email" name="order-email" placeholder="Enter your email" required>
+                <span id="order-email-error" class="error_message"></span>
+                <span id="order-email-success" class="success_message"></span>
+            </p>
+            <p>
+                <label for="order-option">Delivery Option:</label>
+                <select id="order-option" name="order-option" required>
+                    <option value="">Select option</option>
+                    <option value="pickup">Pickup at Store</option>
+                    <option value="delivery">Delivery</option>
+                </select>
+            </p>
+            <p>
+                <label for="order-phone">Phone Number:</label>
+                <input type="tel" id="order-phone" name="order-phone" class="phone-input" placeholder="09XXXXXXXXX" inputmode="numeric" pattern="09[0-9]{9}" maxlength="11" required>
+                <span id="order-phone-error" class="error_message"></span>
+                <span id="order-phone-success" class="success_message"></span>
+            </p>
+            <div id="delivery-details" style="display: none;">
+                <p>
+                    <label for="order-region">Region:</label>
+                    <select id="order-region" name="order-region">
+                        <option value="">Select region</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="order-province">Province:</label>
+                    <select id="order-province" name="order-province" disabled>
+                        <option value="">Select province</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="order-city">City / Municipality:</label>
+                    <select id="order-city" name="order-city" disabled>
+                        <option value="">Select city</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="order-barangay">Barangay:</label>
+                    <select id="order-barangay" name="order-barangay" disabled>
+                        <option value="">Select barangay</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="order-address">Address:</label>
+                    <input type="text" id="order-address" name="order-address" placeholder="Enter your address" required>
+                </p>
+                <p>
+                    <label for="order-postal">Postal Code:</label>
+                    <input type="text" id="order-postal" name="order-postal" placeholder="Enter postal code" inputmode="numeric" pattern="\d*" disabled>
+                </p>
+            </div>
+            <p>
+                <label for="payment-method">Mode of Payment:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="">Select payment method</option>
+                    <option value="cash">Cash</option>
+                    <option value="gcash">Gcash</option>
+                    <option value="credit_card">Credit Card</option>
+                </select>
+            </p>
+            <button id="checkout-btn" type="submit" class="checkout-button">Proceed to Checkout</button>
+            <span id="checkout-status" class="error_message" style="display:block; margin-top:8px;"></span>
+        </form>
+    </div>
+
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer class="footer">
+    <div class="footer-left">
+        <h2>AUTOPRO</h2>
+        <p>All Terrain & Street Lifestyle</p>
+    </div>
+    <div class="footer-center">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Products.html">Products</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+        <a href="faq.html">FAQ</a>
+    </div>
+    <div class="footer-right" style="display:flex; flex-direction:row !important; justify-content:center; gap:25px; align-items:center;">
+        <a href="https://www.facebook.com/autoprolifestyle" target="_blank" class="social-media">
+            <i class="fa-brands fa-square-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/autopro_lifestyle/" target="_blank" class="social-media">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@autoprolifestyle" target="_blank" class="social-media">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+    </div>
+</footer>
+
+<div class="footer-bottom">
+    © 2024 AUTOPRO ALL TERRAIN & STREET LIFESTYLE
+</div>
+
+<script>
+  
+    const products = {
+       
+        'hyogo': { name: 'HYOGO', price: 50000, category: 'Wheels' },
+        'evolution': { name: 'EVOLUTION', price: 52000, category: 'Wheels' },
+        'rega': { name: 'REGA', price: 52000, category: 'Wheels' },
+        'tokushima': { name: 'TOKUSHIMA', price: 50000, category: 'Wheels' },
+        'yagamata': { name: 'YAGAMATA', price: 50000, category: 'Wheels' },
+        'gr6': { name: 'GR 6', price: 52000, category: 'Wheels' },
+        'toyama': { name: 'TOYAMA', price: 52000, category: 'Wheels' },
+        'wakayama': { name: 'WAKAYAMA', price: 62000, category: 'Wheels' },
+        'swagg': { name: 'SWAGG', price: 76800, category: 'Wheels' },
+        'aomori': { name: 'AOMORI', price: 52000, category: 'Wheels' },
+        'akita': { name: 'AKITA', price: 52000, category: 'Wheels' },
+        'tanker': { name: 'TANKER', price: 50000, category: 'Wheels' },
+        'madness': { name: 'MADNESS', price: 52000, category: 'Wheels' },
+        'kyogo': { name: 'KYOGO', price: 50000, category: 'Wheels' },
+        'trek': { name: 'TREK', price: 50000, category: 'Wheels' },
+        'rs02': { name: 'RS02', price: 43500, category: 'Wheels' },
+        'theory9305': { name: 'THEORY 9305', price: 50000, category: 'Wheels' },
+        'axis8': { name: 'AXIS 8', price: 62000, category: 'Wheels' },
+        'roadkill': { name: 'ROADKILL BEADLOCK', price: 79000, category: 'Wheels' },
+        'ion189': { name: 'ION 189', price: 62000, category: 'Wheels' },
+
+        'ampterrainattackrt': { name: 'AMP-TERRAIN ATTACK R/T', price: 16800, category: 'Tires' },
+        'ampterrainproata': { name: 'AMP-TERRAIN ATTACK A/T A', price: 15000, category: 'Tires' },
+        'ampterrainattackat': { name: 'AMP - TERRAIN PRO A/T P', price: 14000, category: 'Tires' },
+        'ampterrainattackmta': { name: 'AMP - TERRAIN ATTACK M/T A P', price: 15400, category: 'Tires' },
+        'sumaxxmaxracing86s': { name: 'SUMAXX - MAX RACING 86S', price: 6300, category: 'Tires' },
+        'sumaxxmaxdriftingx': { name: 'SUMAXX - MAX DRIFTING X', price: 3250, category: 'Tires' },
+        'maxtreckmudtrac': { name: 'MAXTREK - MUD TRAC', price: 6000, category: 'Tires' },
+        'maxtreksu800at': { name: 'MAXTRECK SU800 AT', price: 5500, category: 'Tires' },
+        'maxtrekmaximusm2': { name: 'MAXTREK - MAXIMUS M2', price: 3950, category: 'Tires' },
+        'maxtreksu830': { name: 'MAXTRECK SU-830', price: 3050, category: 'Tires' },
+        'maxtrekfortist5ht': { name: 'MAXTRECK Fortis T5 HT', price: 6850, category: 'Tires' },
+        'lensofenix': { name: 'LENSO - FENIX', price: 6600, category: 'Tires' },
+        'maxtreksierras6': { name: 'MAXREK - SIERRA S6', price: 5600, category: 'Tires' },
+        'sumaxxallterrainat': { name: 'SUMAXX ALL TERRAIN AT', price: 6350, category: 'Tires' },
+        'maxtrekmaximusds501': { name: 'MAXTREK - MAXIMUS DS501', price: 6100, category: 'Tires' },
+
+     
+        'tjmsnorkelairtechwedgetrail': { name: 'TJM - SNORKEL AIRTECH WEDGE TAIL', price: 25000, category: 'Offroad Accessories' },
+        'tjmsnorkelairtecairram': { name: 'TJM - SNORKEL AIRTEC AIR RAM', price: 22500, category: 'Offroad Accessories' },
+        'tjmnarvaultimaleed': { name: 'TJM - NARVA ULTIMA LED', price: 68000, category: 'Offroad Accessories' },
+        'tjmleafspring': { name: 'TJM - LEAF SPRING', price: 40000, category: 'Offroad Accessories' },
+        'tjmexhaustsystemcatback': { name: 'TJM - EXHAUST SYSTEM CATBACK', price: 35000, category: 'Offroad Accessories' },
+        'tjmuvp': { name: 'TJM - UVP', price: 17000, category: 'Offroad Accessories' },
+        'tjmsnorkelheadwedgetrail': { name: 'TJM - SNORKEL HEAD WEDGE TAIL', price: 6500, category: 'Offroad Accessories' },
+        'tjmwinchextensionstrap': { name: 'TJM - WINCH EXTENSION STRAP', price: 8000, category: 'Offroad Accessories' },
+        'xgsroamer': { name: 'XGS ROAMER', price: 42000, category: 'Offroad Accessories' },
+        'xgsrugged': { name: 'XGS RUGGED', price: 64000, category: 'Offroad Accessories' },
+        'tjmpanhardrod': { name: 'TJM - PANHARD ROD', price: 20666.67, category: 'Offroad Accessories' },
+        'tjmmudflap': { name: 'TJM - MUD FLAP', price: 1500, category: 'Offroad Accessories' },
+        'tjmsilverelectionxgsshocks': { name: 'TJM - SILVER EDITION XGS SHOCKS', price: 40000, category: 'Offroad Accessories' },
+        'tjmcoilspring': { name: 'TJM - XGS Series 4000 COIL SPRING', price: 14000, category: 'Offroad Accessories' },
+        'tjmoutbackbullbar': { name: 'TJM - OUTBACK BULL BAR', price: 70000, category: 'Offroad Accessories' },
+        'tjmaxning': { name: 'TJM - AWNING', price: 15000, category: 'Offroad Accessories' },
+
+        
+        'foxwarnshirt': { name: 'FOX/WARN SHIRT', price: 450, category: 'Merchandises' },
+        'blackmambashirt': { name: 'BLACK MAMBA SHIRT', price: 450, category: 'Merchandises' },
+        'tjmshirt': { name: 'TJM SHIRT', price: 450, category: 'Merchandises' },
+        'explorershirt': { name: 'EXPLORER SHIRT', price: 450, category: 'Merchandises' },
+        'ampshirt': { name: 'AMP SHIRT', price: 450, category: 'Merchandises' },
+        'umbrella': { name: 'UMBRELLA', price: 350, category: 'Merchandises' },
+        'bodyarmor4x4': { name: 'BODY ARMOR 4X4 - TRUCKERS CAP', price: 300, category: 'Merchandises' },
+        'bulldogcap': { name: 'BULLDOG - TRUCKERS CAP', price: 300, category: 'Merchandises' },
+        'dirtylifecap': { name: 'DIRTY LIFE - TRUCKERS CAP', price: 300, category: 'Merchandises' },
+        'dpo cap': { name: 'DPO - TRUCKERS CAP', price: 300, category: 'Merchandises' },
+        'raffa cap': { name: 'RAFFA - TRUCKERS CAP', price: 300, category: 'Merchandises' },
+
+        
+        'dubprolube5w40': { name: 'Dub PRO LUBE - 5w 40', price: 625, category: 'Lubricants' },
+        'dubprolube10w40': { name: 'Dub PRO LUBE - 10w 40', price: 530, category: 'Lubricants' },
+        'hks5w30': { name: 'HKS - 5W 30', price: 2400, category: 'Lubricants' }
+    };
+
+    function getColorOptions() {
+        return ['Black', 'White', 'Silver', 'Gunmetal', 'Dark Gunmetal', 'Hyper Silver', 'Matt Gold', 'Matt Black', 'Machine Face'];
+    }
+
+    function getSizeOptions() {
+        return ['XS', 'S', 'M', 'L', 'XL', 'XXL', '17x8.5', '17x9', '18x8.5', '20x8.5', '20x9'];
+    }
+
+    function getBrandOptions() {
+        return ['TJM', 'FOX', 'WARN', 'AMP', 'Body Armor 4x4', 'Bulldog', 'Dirty Life', 'DPO', 'Raffa'];
+    }
+
+    function getModelOptions() {
+        return ['Toyota', 'Ford', 'Chevrolet', 'Nissan', 'Dodge', 'GMC', 'Jeep', 'Isuzu', 'Mitsubishi', 'Other'];
+    }
+
+    function getAreaOptions() {
+        return ['Front', 'Rear', 'Both', 'Left', 'Right', 'Center', 'Full', 'N/A'];
+    }
+
+    function getPartOptions() {
+        return ['Bumper', 'Suspension', 'Exhaust', 'Lighting', 'Protection', 'Interior', 'Exterior', 'Drivetrain', 'N/A'];
+    }
+
+    function getDescriptionOptions() {
+        return ['Standard', 'Heavy Duty', 'Custom Fit', 'Performance', 'OEM', 'Aftermarket', 'N/A'];
+    }
+
+    function createSelectOptions(value, optionsArray) {
+        const normalizedValue = value ? value.toLowerCase() : '';
+        const selectedOption = optionsArray.find(opt => opt.toLowerCase() === normalizedValue);
+        const remainingOptions = optionsArray.filter(opt => !selectedOption || opt.toLowerCase() !== normalizedValue);
+        const options = [];
+        if (selectedOption) {
+            options.push(`<option value="${selectedOption}" selected>${selectedOption}</option>`);
+        } else if (value) {
+            options.push(`<option value="${value}" selected>${value}</option>`);
+        }
+        remainingOptions.forEach(opt => options.push(`<option value="${opt}">${opt}</option>`));
+        return options.join('');
+    }
+
+    function getProductOptionList(item, fieldName, fallback) {
+        if (item && Array.isArray(item[`${fieldName}Options`]) && item[`${fieldName}Options`].length > 0) {
+            return item[`${fieldName}Options`];
+        }
+        return fallback();
+    }
+
+    function createSelectElement(fieldId, value, optionsArray) {
+        const options = createSelectOptions(value, optionsArray);
+        return `
+            <select id="${fieldId}" onchange="autoUpdateCartItem('${fieldId}')">
+                <option value="">-- Select --</option>
+                ${options}
+            </select>
+        `;
+    }
+
+    function autoUpdateCartItem(fieldId) {
+        const dashIndex = fieldId.indexOf('-');
+        const cartKey = dashIndex === -1 ? fieldId : fieldId.slice(dashIndex + 1);
+        const cart = JSON.parse(localStorage.getItem('cart')) || {};
+        const item = cart[cartKey];
+        
+        if (!item) return;
+        
+        const fieldType = dashIndex === -1 ? fieldId : fieldId.slice(0, dashIndex);
+        const value = document.getElementById(fieldId).value;
+        
+        if (fieldType === 'qty') {
+            const parsedValue = parseInt(value);
+            if (parsedValue < 1) {
+                alert('Quantity must be at least 1');
+                document.getElementById(fieldId).value = item.quantity;
+                return;
+            }
+            if (parsedValue > 50) {
+                alert('Maximum Order per product is 50 pcs only. For Bulk Orders, please proceed to contact page.');
+                document.getElementById(fieldId).value = item.quantity;
+                return;
+            }
+            item.quantity = parsedValue;
+            cart[cartKey] = item;
+        } else {
+            const optionField = fieldType === 'desc' ? 'description' : fieldType;
+            if (['color', 'size', 'model', 'brand', 'description', 'area', 'part'].includes(optionField)) {
+                item[optionField] = value;
+                const newKey = generateCartKey(item.productId, item);
+                delete cart[cartKey];
+                if (cart[newKey]) {
+                    cart[newKey].quantity += item.quantity;
+                    const optionKeys = ['colorOptions', 'sizeOptions', 'modelOptions', 'brandOptions', 'descriptionOptions', 'areaOptions', 'partOptions'];
+                    optionKeys.forEach(key => {
+                        if (!cart[newKey][key] && item[key]) {
+                            cart[newKey][key] = item[key];
+                        }
+                    });
+                } else {
+                    cart[newKey] = item;
+                }
+            }
+        }
+        
+        localStorage.setItem('cart', JSON.stringify(cart));
+        loadCart();
+    }
+
+    function loadCart() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || {};
+        const cartItemsDiv = document.getElementById('cart-items');
+        const totalPriceSpan = document.getElementById('total-price');
+        const paymentSection = document.getElementById('payment-section');
+        let total = 0;
+
+        cartItemsDiv.innerHTML = '';
+
+        if (Object.keys(cart).length === 0) {
+            cartItemsDiv.innerHTML = '<p style="text-align: center; font-size: 1.25rem;"> <strong>Your cart is empty.</strong></p> <br><br><br>';
+            totalPriceSpan.textContent = '0.00';
+            document.getElementById('checkout-btn').style.display = 'none';
+            if (paymentSection) paymentSection.style.display = 'none';
+            const orderSection = document.getElementById('order-form-section');
+            if (orderSection) orderSection.style.display = 'none';
+            updateCartBadge();
+            return;
+        }
+
+        if (paymentSection) paymentSection.style.display = 'block';
+        const orderSection = document.getElementById('order-form-section');
+        if (orderSection) orderSection.style.display = 'block';
+
+        for (const [cartKey, item] of Object.entries(cart)) {const productId = item.productId || cartKey.split('_')[0];const product = products[productId];
+            if (!product) continue;
+
+            const itemTotal = product.price * item.quantity;
+            total += itemTotal;
+
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'cart-item';
+            
+            let controlsHTML = `
+                <div class="cart-item-controls">
+                    <div class="cart-item-control">
+                        <label for="qty-${cartKey}">Quantity:</label>
+                        <input type="number" id="qty-${cartKey}" min="1" max="50" value="${item.quantity}" onchange="autoUpdateCartItem(this.id)">
+                    </div>
+            `;
+            
+            if (item.color !== null && item.color !== undefined) {
+                controlsHTML += `
+                    <div class="cart-item-control">
+                        <label for="color-${cartKey}">Color:</label>
+                        ${createSelectElement(`color-${cartKey}`, item.color, getProductOptionList(item, 'color', getColorOptions))}
+                    </div>
+                `;
+            }
+            
+            if (item.size !== null && item.size !== undefined) {
+                controlsHTML += `
+                    <div class="cart-item-control">
+                        <label for="size-${cartKey}">Size/Model:</label>
+                        ${createSelectElement(`size-${cartKey}`, item.size, getProductOptionList(item, 'size', getSizeOptions))}
+                    </div>
+                `;
+            }
+            
+            if (item.model !== null && item.model !== undefined) {
+                controlsHTML += `
+                    <div class="cart-item-control">
+                        <label for="model-${cartKey}">Car Model:</label>
+                        ${createSelectElement(`model-${cartKey}`, item.model, getProductOptionList(item, 'model', getModelOptions))}
+                    </div>
+                `;
+            }
+            
+            if (item.brand !== null && item.brand !== undefined) {
+                controlsHTML += `
+                    <div class="cart-item-control">
+                        <label for="brand-${cartKey}">Brand:</label>
+                        ${createSelectElement(`brand-${cartKey}`, item.brand, getProductOptionList(item, 'brand', getBrandOptions))}
+                    </div>
+                `;
+            }
+            
+            if (item.description !== null && item.description !== undefined) {
+                controlsHTML += `
+                    <div class="cart-item-control">
+                        <label for="desc-${cartKey}">Description:</label>
+                        ${createSelectElement(`desc-${cartKey}`, item.description, getProductOptionList(item, 'description', getDescriptionOptions))}
+                    </div>
+                `;
+            }
+            
+            if (item.area !== null && item.area !== undefined) {
+                controlsHTML += `
+                    <div class="cart-item-control">
+                        <label for="area-${cartKey}">Area:</label>
+                        ${createSelectElement(`area-${cartKey}`, item.area, getProductOptionList(item, 'area', getAreaOptions))}
+                    </div>
+                `;
+            }
+            
+            if (item.part !== null && item.part !== undefined) {
+                controlsHTML += `
+                    <div class="cart-item-control">
+                        <label for="part-${cartKey}">Part:</label>
+                        ${createSelectElement(`part-${cartKey}`, item.part, getProductOptionList(item, 'part', getPartOptions))}
+                    </div>
+                `;
+            }
+            
+            controlsHTML += '</div>';
+            
+            itemDiv.innerHTML = `
+                <h3>${product.name}</h3>
+                <p>Category: ${product.category}</p>
+                <p>Price: PHP ${product.price.toLocaleString()}</p>
+                
+                ${controlsHTML}
+                
+                <p>Subtotal: PHP <span class="item-subtotal" data-cartkey="${cartKey}" data-price="${product.price}">${itemTotal.toLocaleString()}</span></p>
+                <div class="update-status" id="status-${cartKey}" style="display:none;">✓ Auto-saved</div>
+                
+                <div class="cart-actions">
+                    <button class="remove-btn" onclick="removeFromCart('${cartKey}')">Remove</button>
+                </div>
+            `;
+            cartItemsDiv.appendChild(itemDiv);
+        }
+
+        totalPriceSpan.textContent = total.toLocaleString();
+        document.getElementById('checkout-btn').style.display = 'block';
+        updateCartBadge();
+    }
+
+    function updateCartBadge() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || {};
+        const count = Object.values(cart).reduce((sum, item) => sum + (Number(item.quantity) || 0), 0);
+        const badge = document.getElementById('cart-count');
+        if (!badge) return;
+        if (count > 0) {
+            badge.textContent = count;
+            badge.style.display = 'flex';
+        } else {
+            badge.style.display = 'none';
+        }
+    }
+
+    function removeFromCart(cartKey) {
+        const cart = JSON.parse(localStorage.getItem('cart')) || {};
+        delete cart[cartKey];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        loadCart();
+    }
+
+    const paymentMethodSelect = document.getElementById('payment-method');
+    const checkoutBtn = document.getElementById('checkout-btn');
+    const orderForm = document.getElementById('order-form');
+    const orderName = document.getElementById('order-name');
+    const orderEmail = document.getElementById('order-email');
+    const orderPhone = document.getElementById('order-phone');
+    const orderOption = document.getElementById('order-option');
+    const orderRegion = document.getElementById('order-region');
+    const orderProvince = document.getElementById('order-province');
+    const orderCity = document.getElementById('order-city');
+    const orderBarangay = document.getElementById('order-barangay');
+    const orderAddress = document.getElementById('order-address');
+    const orderPostal = document.getElementById('order-postal');
+    const deliveryDetails = document.getElementById('delivery-details');
+    const orderFormFields = orderForm ? Array.from(orderForm.querySelectorAll('input, textarea, select')) : [];
+
+    function clearSelect(select, placeholderText) {
+        if (!select) return;
+        select.innerHTML = `<option value="">${placeholderText}</option>`;
+        select.disabled = true;
+        select.value = '';
+    }
+
+    function setSelectOptions(select, items, valueKey, textKey, placeholderText) {
+        if (!select) return;
+        const options = [`<option value="">${placeholderText}</option>`].concat(
+            items.map(item => `<option value="${item[valueKey]}">${item[textKey]}</option>`)
+        );
+        select.innerHTML = options.join('');
+        select.disabled = false;
+        select.selectedIndex = 0;
+    }
+
+    async function loadJsonXHR(path) {
+        return new Promise((resolve) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', path, true);
+            xhr.overrideMimeType('application/json');
+            xhr.onload = function() {
+                if (xhr.status === 200 || xhr.status === 0) {
+                    try {
+                        resolve(JSON.parse(xhr.responseText));
+                        return;
+                    } catch (error) {
+                        console.error('JSON parse error for', path, error);
+                    }
+                }
+                resolve([]);
+            };
+            xhr.onerror = function() {
+                console.error('XHR failed to load', path);
+                resolve([]);
+            };
+            xhr.send();
+        });
+    }
+
+    async function loadJson(path) {
+        try {
+            const response = await fetch(path);
+            if (!response.ok) throw new Error(`Failed to load ${path}`);
+            return await response.json();
+        } catch (error) {
+            console.warn('Fetch failed, falling back to XHR:', error);
+            return await loadJsonXHR(path);
+        }
+    }
+
+    async function populateRegionOptions() {
+        if (!orderRegion) return;
+        const regions = await loadJson('ph-json/region.json');
+        const sortedRegions = regions.slice().sort((a, b) => a.region_name.localeCompare(b.region_name));
+        setSelectOptions(orderRegion, sortedRegions, 'region_code', 'region_name', 'Select region');
+        clearSelect(orderProvince, 'Select province');
+        clearSelect(orderCity, 'Select city/municipality');
+        clearSelect(orderBarangay, 'Select barangay');
+        if (orderPostal) {
+            orderPostal.disabled = false;
+            orderPostal.value = '';
+            orderPostal.placeholder = 'Enter postal code';
+        }
+    }
+
+    async function populateProvinceOptions() {
+        if (!orderRegion || !orderProvince) return;
+        const regionCode = orderRegion.value;
+        if (!regionCode) {
+            clearSelect(orderProvince, 'Select province');
+            clearSelect(orderCity, 'Select city/municipality');
+            clearSelect(orderBarangay, 'Select barangay');
+            return;
+        }
+
+        const provinces = await loadJson('ph-json/province.json');
+        const filteredProvinces = provinces
+            .filter(entry => entry.region_code === regionCode)
+            .sort((a, b) => a.province_name.localeCompare(b.province_name));
+
+        setSelectOptions(orderProvince, filteredProvinces, 'province_code', 'province_name', 'Select province');
+        clearSelect(orderCity, 'Select city/municipality');
+        clearSelect(orderBarangay, 'Select barangay');
+        if (orderPostal) orderPostal.value = '';
+    }
+
+    async function populateCityOptions() {
+        if (!orderProvince || !orderCity) return;
+        const provinceCode = orderProvince.value;
+        if (!provinceCode) {
+            clearSelect(orderCity, 'Select city/municipality');
+            clearSelect(orderBarangay, 'Select barangay');
+            return;
+        }
+
+        const cities = await loadJson('ph-json/city.json');
+        const filteredCities = cities
+            .filter(entry => entry.province_code === provinceCode)
+            .sort((a, b) => a.city_name.localeCompare(b.city_name));
+
+        setSelectOptions(orderCity, filteredCities, 'city_code', 'city_name', 'Select city/municipality');
+        clearSelect(orderBarangay, 'Select barangay');
+        if (orderPostal) orderPostal.value = '';
+    }
+
+    async function populateBarangayOptions() {
+        if (!orderCity || !orderBarangay) return;
+        const cityCode = orderCity.value;
+        if (!cityCode) {
+            clearSelect(orderBarangay, 'Select barangay');
+            return;
+        }
+
+        const barangays = await loadJson('ph-json/barangay.json');
+        const filteredBarangays = barangays
+            .filter(entry => entry.city_code === cityCode)
+            .sort((a, b) => a.brgy_name.localeCompare(b.brgy_name));
+
+        setSelectOptions(orderBarangay, filteredBarangays, 'brgy_code', 'brgy_name', 'Select barangay');
+    }
+
+    function populatePostalOptions() {
+        if (!orderPostal) return;
+        orderPostal.disabled = false;
+        orderPostal.placeholder = 'Enter postal code';
+    }
+
+    function updateAddressRequirement() {
+        if (!deliveryDetails || !orderOption) return;
+        const delivery = orderOption.value === 'delivery';
+        deliveryDetails.style.display = delivery ? 'block' : 'none';
+        [orderRegion, orderProvince, orderCity, orderBarangay, orderAddress, orderPostal].forEach(field => {
+            if (!field) return;
+            field.required = delivery;
+            field.disabled = !delivery;
+            if (!delivery) {
+                field.value = '';
+                try { field.setCustomValidity(''); } catch (e) { /* ignore */ }
+            }
+        });
+        if (delivery) {
+            populateRegionOptions();
+        }
+    }
+
+    const emailPattern = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    function validateOrderName() {
+        if (!orderName) return;
+        const cleaned = orderName.value.replace(/[0-9]/g, '');
+        if (orderName.value !== cleaned) {
+            orderName.value = cleaned;
+        }
+    }
+
+    function validateEmail() {
+        if (!orderEmail) return;
+        const email = orderEmail.value.trim();
+        const emailError = document.getElementById('order-email-error');
+        const emailSuccess = document.getElementById('order-email-success');
+
+        if (emailError) emailError.textContent = '';
+        if (emailSuccess) emailSuccess.textContent = '';
+        orderEmail.classList.remove('email-valid', 'email-invalid');
+        orderEmail.style.borderColor = '';
+        orderEmail.setCustomValidity('');
+
+        if (email === '') {
+            return;
+        }
+
+        if (emailPattern.test(email)) {
+            orderEmail.classList.add('email-valid');
+            if (emailSuccess) emailSuccess.textContent = '✓ Valid email';
+            orderEmail.style.borderColor = '#4CAF50';
+            orderEmail.setCustomValidity('');
+        } else {
+            orderEmail.classList.add('email-invalid');
+            if (emailError) emailError.textContent = 'Please enter a valid email address (e.g., user@example.com)';
+            orderEmail.style.borderColor = '#f44336';
+            orderEmail.setCustomValidity('Please enter a valid email address (e.g., user@example.com)');
+        }
+    }
+
+    const phonePattern = /^09\d{9}$/;
+
+    function validatePhoneNumber() {
+        if (!orderPhone) return;
+        const phoneValue = orderPhone.value.replace(/\D/g, '');
+        const phoneError = document.getElementById('order-phone-error');
+        const phoneSuccess = document.getElementById('order-phone-success');
+
+        if (phoneError) phoneError.textContent = '';
+        if (phoneSuccess) phoneSuccess.textContent = '';
+        orderPhone.classList.remove('phone-valid', 'phone-invalid');
+        orderPhone.style.borderColor = '';
+        orderPhone.setCustomValidity('');
+
+        if (phoneValue === '') {
+            if (orderPhone.value !== phoneValue) {
+                orderPhone.value = phoneValue;
+            }
+            return;
+        }
+
+        if (orderPhone.value !== phoneValue) {
+            orderPhone.value = phoneValue;
+        }
+
+        if (phonePattern.test(phoneValue)) {
+            orderPhone.classList.add('phone-valid');
+            if (phoneSuccess) phoneSuccess.textContent = '✓ Valid phone number';
+            orderPhone.style.borderColor = '#4CAF50';
+            orderPhone.setCustomValidity('');
+        } else {
+            orderPhone.classList.add('phone-invalid');
+            if (phoneError) phoneError.textContent = 'Please enter a valid 11-digit phone number starting with 09.';
+            orderPhone.style.borderColor = '#f44336';
+            orderPhone.setCustomValidity('Please enter a valid 11-digit phone number starting with 09.');
+        }
+    }
+
+    function validateOrderAddress() {
+        if (!orderAddress) return;
+        const deliverySelected = orderOption && orderOption.value === 'delivery';
+        if (!deliverySelected) {
+            orderAddress.setCustomValidity('');
+            return;
+        }
+        if (orderAddress.value.trim() === '') {
+            orderAddress.setCustomValidity('Please enter your address for delivery.');
+        } else {
+            orderAddress.setCustomValidity('');
+        }
+    }
+
+    function isOrderFormValid() {
+        if (!orderForm) return true;
+        if (orderOption && orderOption.value === '') return false;
+        validateOrderName();
+        validateEmail();
+        validatePhoneNumber();
+        validateOrderAddress();
+        if (orderOption && orderOption.value === 'delivery') {
+            [orderRegion, orderProvince, orderCity, orderBarangay, orderPostal].forEach(field => {
+                if (field && field.value.trim() === '') {
+                    field.setCustomValidity('This field is required for delivery.');
+                } else if (field) {
+                    field.setCustomValidity('');
+                }
+            });
+        } else {
+            [orderRegion, orderProvince, orderCity, orderBarangay, orderPostal].forEach(field => {
+                if (field) field.setCustomValidity('');
+            });
+        }
+        return orderForm.checkValidity();
+    }
+
+    function updateCheckoutButtonState() {
+        const formValid = isOrderFormValid();
+        
+        try {
+            console.debug('updateCheckoutButtonState', {
+                orderOption: orderOption ? orderOption.value : null,
+                orderAddressRequired: orderAddress ? orderAddress.required : null,
+                orderAddressDisabled: orderAddress ? orderAddress.disabled : null,
+                orderAddressValidationMessage: orderAddress ? orderAddress.validationMessage : null,
+                paymentMethod: paymentMethodSelect ? paymentMethodSelect.value : null,
+                formValid
+            });
+        } catch (e) {}
+        if (!checkoutBtn) return;
+        const pmEmpty = !paymentMethodSelect || paymentMethodSelect.value === '';
+        
+        const reasons = [];
+        if (pmEmpty) reasons.push('Select a mode of payment');
+        if (!formValid) {
+            
+            if (orderForm && orderFormFields && orderFormFields.length) {
+                orderFormFields.forEach(field => {
+                    if (!field) return;
+                    if (field.disabled) return;
+                    
+                    try {
+                        if (field.offsetParent === null) return;
+                    } catch (e) {}
+                    if (!field.checkValidity()) {
+                        const labelEl = field.id ? document.querySelector(`label[for="${field.id}"]`) : null;
+                        const labelText = labelEl ? labelEl.textContent.replace(/\s*:\s*$/, '') : (field.name || field.id || 'Field');
+                        const msg = `${labelText}: ${field.validationMessage || 'is invalid'}`;
+                        if (msg && !reasons.includes(msg)) reasons.push(msg);
+                    }
+                });
+            } else {
+                reasons.push('Please complete required order information');
+            }
+        }
+        const statusEl = document.getElementById('checkout-status');
+        checkoutBtn.style.opacity = reasons.length > 0 ? '0.6' : '1';
+        checkoutBtn.style.cursor = 'pointer';
+        if (statusEl) {
+            if (reasons.length > 0) {
+                statusEl.style.display = 'block';
+                statusEl.textContent = 'Cannot checkout: ' + reasons.join('; ');
+            } else {
+                statusEl.textContent = '';
+                statusEl.style.display = 'none';
+            }
+        }
+    }
+
+    if (orderForm) {
+        orderFormFields.forEach(field => field.addEventListener('input', () => {
+            if (field === orderName) validateOrderName();
+            if (field === orderEmail) validateEmail();
+            if (field === orderPhone) validatePhoneNumber();
+            if (field === orderOption) updateAddressRequirement();
+            updateCheckoutButtonState();
+        }));
+    }
+
+    if (orderOption) {
+        orderOption.addEventListener('change', () => {
+            updateAddressRequirement();
+            updateCheckoutButtonState();
+        });
+    }
+
+    if (orderRegion) {
+        orderRegion.addEventListener('change', () => {
+            populateProvinceOptions();
+            updateCheckoutButtonState();
+        });
+    }
+
+    if (orderProvince) {
+        orderProvince.addEventListener('change', () => {
+            populateCityOptions();
+            updateCheckoutButtonState();
+        });
+    }
+
+    if (orderCity) {
+        orderCity.addEventListener('change', () => {
+            populateBarangayOptions();
+            populatePostalOptions();
+            updateCheckoutButtonState();
+        });
+    }
+
+    if (orderBarangay) {
+        orderBarangay.addEventListener('change', updateCheckoutButtonState);
+    }
+
+    if (orderPostal) {
+        orderPostal.addEventListener('change', updateCheckoutButtonState);
+        orderPostal.addEventListener('keypress', (event) => {
+            if (!/[0-9]/.test(event.key)) {
+                event.preventDefault();
+            }
+        });
+        orderPostal.addEventListener('input', (event) => {
+            const input = event.target;
+            const cleaned = input.value.replace(/\D/g, '');
+            if (input.value !== cleaned) {
+                input.value = cleaned;
+            }
+            updateCheckoutButtonState();
+        });
+    }
+
+    if (orderName) {
+        orderName.addEventListener('keypress', (event) => {
+            if (/[0-9]/.test(event.key)) {
+                event.preventDefault();
+            }
+        });
+    }
+
+    if (orderPhone) {
+        orderPhone.addEventListener('keypress', (event) => {
+            if (!/[0-9]/.test(event.key)) {
+                event.preventDefault();
+            }
+        });
+    }
+
+    updateAddressRequirement();
+    paymentMethodSelect.addEventListener('change', updateCheckoutButtonState);
+    updateCheckoutButtonState();
+
+    if (orderForm) {
+        orderForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+           
+            if (typeof processCheckout === 'function') {
+                processCheckout();
+            } else {
+                const checkoutBtnElement = document.getElementById('checkout-btn');
+                if (checkoutBtnElement) {
+                    checkoutBtnElement.click();
+                }
+            }
+        });
+    }
+
+    
+    (function attachCheckoutHandler() {
+        const checkoutBtnElement = document.getElementById('checkout-btn');
+        if (!checkoutBtnElement) return;
+
+        function processCheckout(event) {
+            console.debug('processCheckout invoked', { eventType: event && event.type, disabled: checkoutBtn ? checkoutBtn.disabled : null });
+            if (event && event.preventDefault) event.preventDefault();
+            if (orderForm && !orderForm.checkValidity()) {
+                orderForm.reportValidity();
+                return;
+            }
+            if (!paymentMethodSelect || paymentMethodSelect.value === '') {
+                alert('Please select a mode of payment before proceeding to checkout.');
+                if (paymentMethodSelect) paymentMethodSelect.focus();
+                return;
+            }
+            const paymentLabel = paymentMethodSelect.options[paymentMethodSelect.selectedIndex].text;
+            const confirmed = confirm(`Proceed to checkout using ${paymentLabel}?`);
+            if (!confirmed) return;
+            const emptyCart = {};
+            localStorage.setItem('cart', JSON.stringify(emptyCart));
+            loadCart();
+            alert(`Thank you for your purchase! Your order has been processed with ${paymentLabel}. We will shortly notify your order via email.`);
+        }
+
+       
+        window.processCheckout = processCheckout;
+    })();
+
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const navToggle = document.getElementById('navToggle');
+    const sidebarClose = document.getElementById('sidebarClose');
+
+    function closeSidebar() {
+        sidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+    }
+
+    navToggle.addEventListener('click', () => {
+        sidebar.classList.add('active');
+        sidebarOverlay.classList.add('active');
+    });
+
+    sidebarClose.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+
+   
+    loadCart();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Pro All Terrain & Street Lifestyle - Products</title>
+    <link rel="stylesheet" href="style.css">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+
+</head>
+    
+<body class="page-merchandises">
+    <div class="nav">
+    <img src="./images/companylogo.jpg" alt="Auto Pro Logo" height="100" width="200" style="border-radius: 100%" class="companylogo">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-badge" id="cart-count" style="font-family: Arial, Helvetica, sans-serif;">0</span></a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu">☰</button>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar">
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation menu">×</button>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        </ul>
+    </nav>
+</aside>
+      
+      <br>
+      <h1 style="text-align: center;">Merchandises</h1>
+      <div class="search-container">
+          <label for="wheel-search">Search merchandises:</label>
+          <input type="search" id="wheel-search" name="wheel-search" placeholder="Search by product name or feature" aria-label="Search merchandise products">
+      </div>
+      <div id="no-results-message" class="no-results-message" hidden>No merchandise items found matching your search.</div>
+      <br>
+      <br>
+
+    <div class="flex-product">
+
+    <div class="card">
+        <img src="./images/Fox+Warn+Shirt.jpg" alt="Fox/Warn Shirt" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('foxwarnshirt')" onreset="resetoptions('foxwarnshirt')">
+        <h2>FOX/WARN SHIRT</h2>
+        <label for="size-foxwarnshirt">Size:</label>
+        <select id="size-foxwarnshirt" name="size">
+            <option value="--select size--">Select Size</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+        <span id="size-error-foxwarnshirt" class="error_message"></span>
+        <label for="quantity-foxwarnshirt">Quantity:</label>
+        <input type="number" id="quantity-foxwarnshirt" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-foxwarnshirt" class="error_message"></span>
+        <br>
+        <h3>₱450.00</h3>
+        <button type="button" onclick="validateoption('foxwarnshirt')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/Shirt+BM.jpg" alt="Black Mamba Shirt" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('blackmambashirt')" onreset="resetoptions('blackmambashirt')">
+        <h2>BLACK MAMBA SHIRT</h2> 
+        <label for="size-blackmambashirt">Size:</label>
+        <select id="size-blackmambashirt" name="size">
+            <option value="--select size--">Select Size</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            </select>
+        <span id="size-error-blackmambashirt" class="error_message"></span>
+        <label for="quantity-blackmambashirt">Quantity:</label>
+        <input type="number" id="quantity-blackmambashirt" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-blackmambashirt" class="error_message"></span>
+        <br>
+        <h3>₱450.00</h3>
+        <button type="button" onclick="validateoption('blackmambashirt')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/TJM+Shirt.jpg" alt="TJM Shirt" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('tjmshirt')" onreset="resetoptions('tjmshirt')">
+        <h2>TJM SHIRT</h2>
+        <label for="size-tjmshirt">Size:</label>
+        <select id="size-tjmshirt" name="size">
+            <option value="--select size--">Select Size</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+        <span id="size-error-tjmshirt" class="error_message"></span>
+        <label for="quantity-tjmshirt">Quantity:</label>
+        <input type="number" id="quantity-tjmshirt" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-tjmshirt" class="error_message"></span>
+        <br>
+        <h3>₱450.00</h3>
+        <button type="button" onclick="validateoption('tjmshirt')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+       <img src="./images/Shirt+Explorer.jpg" alt="Explorer Shirt" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('explorershirt')" onreset="resetoptions('explorershirt')">
+        <h2>EXPLORER SHIRT</h2>
+        <label for="size-explorershirt">Size:</label>
+        <select id="size-explorershirt" name="size">
+            <option value="--select size--">Select Size</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+        <span id="size-error-explorershirt" class="error_message"></span>
+        <label for="quantity-explorershirt">Quantity:</label>
+        <input type="number" id="quantity-explorershirt" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-explorershirt" class="error_message"></span>
+        <br>
+        <h3>₱450.00</h3>
+        <button type="button" onclick="validateoption('explorershirt')">Add to Cart</button>
+    </div>
+    </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="flex-product">
+    
+     <div class="card">
+        <img src="./images/Shirt+AMP.jpg" alt="AMP Shirt" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('ampshirt')" onreset="resetoptions('ampshirt')">
+        <h2>AMP SHIRT</h2>
+        <label for="size-ampshirt">Size:</label>
+        <select id="size-ampshirt" name="size">
+            <option value="--select size--">Select Size</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
+        <span id="size-error-ampshirt" class="error_message"></span>
+        <label for="quantity-ampshirt">Quantity:</label>
+        <input type="number" id="quantity-ampshirt" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-ampshirt" class="error_message"></span>
+        <br>
+        <h3>PHP450.00</h3>
+        <button type="button" onclick="validateoption('ampshirt')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/Umbrella+Fox+warn.jpg" alt="UMBRELLA" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('umbrella')" onreset="resetoptions('umbrella')">
+        <h2>UMBRELLA</h2>
+        <label for="brand-umbrella">Brand:</label>
+        <select id="brand-umbrella" name="brand">
+            <option value="--select brand--">Select Brand</option>
+            <option value="fox">Fox/Warn</option>
+            <option value="tjm">TJM</option>
+            <option value="amp">AMP</option>
+        </select>
+        <span id="brand-error-umbrella" class="error_message"></span>
+        <label for="quantity-umbrella">Quantity:</label>
+        <input type="number" id="quantity-umbrella" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-umbrella" class="error_message"></span>
+        <br>
+        <h3>PHP 350.00</h3>
+        <button type="button" onclick="validateoption('umbrella')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/Cap+BA+B.jpg" alt="BODY ARMOR 4X4 - TRUCKERS CAP" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('bodyarmor4x4')" onreset="resetoptions('bodyarmor4x4')">
+        <h2>BODY ARMOR 4X4 - TRUCKERS CAP</h2>
+        <label for="quantity-bodyarmor4x4">Quantity:</label>
+        <input type="number" id="quantity-bodyarmor4x4" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-bodyarmor4x4" class="error_message"></span>
+        <br>
+        <h3>PHP 300.00</h3>
+        <button type="button" onclick="validateoption('bodyarmor4x4')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/Cap+Bulldog+B.jpg" alt="BULLDOG - TRUCKERS CAP" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('bulldogcap')" onreset="resetoptions('bulldogcap')">
+        <h2>BULLDOG - TRUCKERS CAP</h2>
+        <label for="quantity-bulldogcap">Quantity:</label>
+        <input type="number" id="quantity-bulldogcap" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-bulldogcap" class="error_message"></span>
+        <br>
+        <h3>PHP 300.00</h3>
+        <button type="button" onclick="validateoption('bulldogcap')">Add to Cart</button>
+    </div>
+    </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="flex-product">
+
+     <div class="card">
+        <img src="./images/Cap+DL+B.jpg" alt="DIRTY LIFE - TRUCKERS CAP" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('dirtylifecap')" onreset="resetoptions('dirtylifecap')">
+        <h2>DIRTY LIFE - TRUCKERS CAP</h2>
+        <label for="quantity-dirtylifecap">Quantity:</label>
+        <input type="number" id="quantity-dirtylifecap" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-dirtylifecap" class="error_message"></span>
+        <br>
+        <h3>PHP 300.00</h3>
+        <button type="button" onclick="validateoption('dirtylifecap')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/Cap+DPO+B.jpg" alt="DPO - TRUCKERS CAP" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('dpo cap')" onreset="resetoptions('dpo cap')">
+        <h2>DPO - TRUCKERS CAP</h2>
+        <label for="quantity-dpo cap">Quantity:</label>
+        <input type="number" id="quantity-dpo cap" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-dpo cap" class="error_message"></span>
+        <br>
+        <h3>PHP 300.00</h3>
+        <button type="button" onclick="validateoption('dpo cap')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/Cap+Raffa+B.jpg" alt="RAFFA - TRUCKERS CAP" height="100" width="200">
+        <div class="container" onsubmit="return validateoption('raffa cap')" onreset="resetoptions('raffa cap')">
+        <h2>RAFFA - TRUCKERS CAP</h2>
+        <label for="quantity-raffa cap">Quantity:</label>
+        <input type="number" id="quantity-raffa cap" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-raffa cap" class="error_message"></span>
+        <br>
+        <h3>PHP 300.00</h3>
+        <button type="button" onclick="validateoption('raffa cap')">Add to Cart</button>
+    </div>
+    </div>
+
+    </div>
+
+    <footer class="footer">
+
+    <div class="footer-left">
+        <h2>AUTOPRO</h2>
+        <p>All Terrain & Street Lifestyle</p>
+    </div>
+
+    <div class="footer-center">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Products.html">Products</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+        <a href="faq.html">FAQ</a>
+    </div>
+
+    <div class="footer-right" style="display:flex; flex-direction:row !important; justify-content:center; gap:25px; align-items:center;">
+
+        <a href="https://www.facebook.com/autoprolifestyle" target="_blank" class="social-media">
+            <i class="fa-brands fa-square-facebook"></i>
+        </a>
+
+        <a href="https://www.instagram.com/autopro_lifestyle/" target="_blank" class="social-media">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@autoprolifestyle" target="_blank" class="social-media">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+    </div>
+
+</footer>
+
+<div class="footer-bottom">
+    © 2024 AUTOPRO ALL TERRAIN & STREET LIFESTYLE
+</div>
+
+
+<script src="https://kit.fontawesome.com/f50125bc94.js" crossorigin="anonymous"></script>
+
+
+<script>
+function showNotification(message) {
+    let notif = document.getElementById('cart-notification');
+    if (!notif) {
+        notif = document.createElement('div');
+        notif.id = 'cart-notification';
+        notif.style.position = 'fixed';
+        notif.style.top = '80px';
+        notif.style.right = '20px';
+        notif.style.padding = '12px 16px';
+        notif.style.backgroundColor = '#4CAF50';
+        notif.style.color = '#fff';
+        notif.style.borderRadius = '8px';
+        notif.style.boxShadow = '0 2px 10px rgba(0,0,0,0.15)';
+        notif.style.zIndex = '9999';
+        notif.style.opacity = '0';
+        notif.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+        notif.style.transform = 'translateY(-10px)';
+        document.body.appendChild(notif);
+    }
+    notif.textContent = message;
+    notif.style.display = 'block';
+    requestAnimationFrame(() => {
+        notif.style.opacity = '1';
+        notif.style.transform = 'translateY(0)';
+    });
+    clearTimeout(window._cartNotificationTimeout);
+    window._cartNotificationTimeout = setTimeout(() => {
+        notif.style.opacity = '0';
+        notif.style.transform = 'translateY(-10px)';
+        setTimeout(() => notif.style.display = 'none', 250);
+    }, 2600);
+}
+
+function updateCartBadge() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || {};
+    const count = Object.values(cart).reduce((sum, item) => sum + (Number(item.quantity) || 0), 0);
+    const badge = document.getElementById('cart-count');
+    if (!badge) return;
+    if (count > 0) {
+        badge.textContent = count;
+        badge.style.display = 'flex';
+    } else {
+        badge.style.display = 'none';
+    }
+}
+
+function generateCartKey(productId, options) {
+    let key = productId;
+    if (options.color) key += '_' + options.color.replace(/\s+/g, '_');
+    if (options.size) key += '_' + options.size.replace(/\s+/g, '_');
+    if (options.model) key += '_' + options.model.replace(/\s+/g, '_');
+    if (options.brand) key += '_' + options.brand.replace(/\s+/g, '_');
+    if (options.description) key += '_' + options.description.replace(/\s+/g, '_');
+    if (options.area) key += '_' + options.area.replace(/\s+/g, '_');
+    if (options.part) key += '_' + options.part.replace(/\s+/g, '_');
+    return key;
+}
+
+function getSelectValues(selectEl, ignoreValues = []) {
+    if (!selectEl) return null;
+    return Array.from(selectEl.options)
+        .map(option => option.value)
+        .filter(value => value && !ignoreValues.includes(value));
+}
+
+function validateoption(productID) {
+    const sizeEl = document.getElementById(`size-${productID}`);
+    const sizeErr = document.getElementById(`size-error-${productID}`);
+    const quantityEl = document.getElementById(`quantity-${productID}`);
+    const brandEl = document.getElementById(`brand-${productID}`);
+    const brandErr = document.getElementById(`brand-error-${productID}`);
+    const quantityErr = document.getElementById(`quantity-error-${productID}`);
+
+    if (sizeErr) {
+        sizeErr.textContent = "";
+    }
+    if (brandErr) {
+        brandErr.textContent = "";
+    }
+    if (quantityErr) {
+        quantityErr.textContent = "";
+    }
+
+    let optionValid = true;
+
+    if (sizeEl && sizeErr) {
+        const size = sizeEl.value;
+        if (size === "--select size--" || size.trim() === "") {
+            sizeErr.textContent = "Please select a size.";
+            optionValid = false;
+        }
+    }
+
+    if (brandEl && brandErr) {
+        const brand = brandEl.value;
+        if (brand === "--select brand--" || brand.trim() === "") {
+            brandErr.textContent = "Please select a brand.";
+            optionValid = false;
+        }
+    }
+
+    if (quantityEl && quantityErr) {
+        const quantity = Number(quantityEl.value);
+        if (!Number.isInteger(quantity) || quantity < 1) {
+            quantityErr.textContent = "Quantity must be 1 or more.";
+            optionValid = false;
+        } else if (quantity > 50) {
+            quantityErr.textContent = "Maximum Order per product is 50 pcs only. For Bulk Orders, please proceed to contact page.";
+            optionValid = false;
+        }
+    }
+
+    if (optionValid) {
+        const cart = JSON.parse(localStorage.getItem('cart')) || {};
+        const options = {
+            size: sizeEl ? sizeEl.value : null,
+            brand: brandEl ? brandEl.value : null
+        };
+        const cartKey = generateCartKey(productID, options);
+        const item = {
+            productId: productID,
+            quantity: Number(quantityEl.value),
+            color: null,
+            size: sizeEl ? sizeEl.value : null,
+            model: null,
+            brand: brandEl ? brandEl.value : null,
+            description: null,
+            area: null,
+            part: null,
+            colorOptions: null,
+            sizeOptions: getSelectValues(sizeEl, ['--select size--']),
+            modelOptions: null,
+            brandOptions: getSelectValues(brandEl, ['--select brand--']),
+            descriptionOptions: null,
+            areaOptions: null,
+            partOptions: null
+        };
+        if (cart[cartKey]) {
+            cart[cartKey].quantity += item.quantity;
+        } else {
+            cart[cartKey] = item;
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartBadge();
+        showNotification("Item added to cart!");
+
+        if (sizeEl) {
+            sizeEl.value = "--select size--";
+        }
+        if (brandEl) {
+            brandEl.value = "--select brand--";
+        }
+        if (quantityEl) {
+            quantityEl.value = "0";
+        }
+        return true;
+    }
+    return false;
+}
+
+function resetoptions(productID) {
+    const sizeErr = document.getElementById(`size-error-${productID}`);
+    const brandErr = document.getElementById(`brand-error-${productID}`);
+    const quantityErr = document.getElementById(`quantity-error-${productID}`);
+    if (sizeErr) {
+        sizeErr.textContent = "";
+    }
+    if (brandErr) {
+        brandErr.textContent = "";
+    }
+    if (quantityErr) {
+        quantityErr.textContent = "";
+    }
+}
+
+const sidebar = document.getElementById('sidebar');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
+const navToggle = document.getElementById('navToggle');
+const sidebarClose = document.getElementById('sidebarClose');
+
+function closeSidebar() {
+    sidebar.classList.remove('active');
+    sidebarOverlay.classList.remove('active');
+}
+
+navToggle.addEventListener('click', () => {
+    sidebar.classList.add('active');
+    sidebarOverlay.classList.add('active');
+});
+
+sidebarClose.addEventListener('click', closeSidebar);
+sidebarOverlay.addEventListener('click', closeSidebar);
+
+updateCartBadge();
+const searchInput = document.getElementById('wheel-search');
+
+function filterProducts() {
+    const query = (searchInput?.value || '').trim().toLowerCase();
+    const cards = document.querySelectorAll('.flex-product .card');
+    let visibleCount = 0;
+    cards.forEach(card => {
+        const title = card.querySelector('h2')?.textContent.toLowerCase() || '';
+        const details = (card.querySelector('ul')?.textContent || card.querySelector('p')?.textContent || '').toLowerCase();
+        const visible = !query || title.includes(query) || details.includes(query);
+        card.style.display = visible ? '' : 'none';
+        if (visible) visibleCount += 1;
+    });
+    const noResults = document.getElementById('no-results-message');
+    if (noResults) {
+        noResults.hidden = visibleCount > 0;
+    }
+}
+
+if (searchInput) {
+    searchInput.addEventListener('input', filterProducts);
+    filterProducts();
+}
+</script>
+
+
+</body>
+</html>
+

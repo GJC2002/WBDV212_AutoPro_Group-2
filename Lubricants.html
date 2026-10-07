@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Pro All Terrain & Street Lifestyle - Services</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body class="page-lubricants">
+    <div class="nav">
+    <img src="./images/companylogo.jpg" alt="Auto Pro Logo" height="100" width="200" style="border-radius: 100%" class="companylogo">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-badge" id="cart-count" style="font-family: Arial, Helvetica, sans-serif;">0</span></a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu">☰</button>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar">
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation menu">×</button>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        </ul>
+    </nav>
+</aside>
+  
+  <br>
+  <h1 style="text-align: center;">Lubricants</h1>
+      <div class="search-container">
+          <label for="wheel-search">Search lubricants:</label>
+          <input type="search" id="wheel-search" name="wheel-search" placeholder="Search by lubricant name or type" aria-label="Search lubricant products">
+      </div>
+      <div id="no-results-message" class="no-results-message" hidden>No lubricants found matching your search.</div>
+
+  <div class="flex-product">
+
+    <div class="card">
+        <img src="./images/5w-40 lubricant.jpg" alt="5w-40" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('dubprolube5w40')" onreset="resetoptions('dubprolube5w40')">
+        <h2>Dub PRO LUBE - 5w 40</h2>
+        <p>Fully Synthetic Oil 5W-40</p>
+        <label for="quantity-dubprolube5w40">Quantity:</label>
+        <input type="number" id="quantity-dubprolube5w40" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-dubprolube5w40" class="error_message"></span>
+        <br>
+        <h3>PHP 625.00</h3>
+        <button type="button" onclick="validateoption('dubprolube5w40')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/10W-40 lubricant.jpg" alt="10W-40" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('dubprolube10w40')" onreset="resetoptions('dubprolube10w40')">
+        <h2>Dub PRO LUBE - 10w 40</h2>
+        <p>Semi Synthetic Oil 10W-40</p>
+        <label for="quantity-dubprolube10w40">Quantity:</label>
+        <input type="number" id="quantity-dubprolube10w40" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-dubprolube10w40" class="error_message"></span>
+        <br>
+        <h3>PHP 530.00</h3>
+        <button type="button" onclick="validateoption('dubprolube10w40')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/HKS - lubricant.jpg" alt="HKS" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('hks5w30')" onreset="resetoptions('hks5w30')">
+        <h2>HKS - 5W 30</h2>
+        <p>5W-30 Super Oil</p>
+        <label for="quantity-hks5w30">Quantity:</label>
+        <input type="number" id="quantity-hks5w30" name="quantity" min="1" max="50" value="0">
+        <span id="quantity-error-hks5w30" class="error_message"></span>
+        <br>
+        <h3>PHP 2,400.00</h3>
+        <button type="button" onclick="validateoption('hks5w30')">Add to Cart</button>
+    </div>
+    </div>
+
+  </div>
+
+   <footer class="footer">
+
+    <div class="footer-left">
+        <h2>AUTOPRO</h2>
+        <p>All Terrain & Street Lifestyle</p>
+    </div>
+
+    <div class="footer-center">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Products.html">Products</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+        <a href="faq.html">FAQ</a>
+    </div>
+
+    <div class="footer-right" style="display:flex; flex-direction:row !important; justify-content:center; gap:25px; align-items:center;">
+
+        <a href="https://www.facebook.com/autoprolifestyle" target="_blank" class="social-media">
+            <i class="fa-brands fa-square-facebook"></i>
+        </a>
+
+        <a href="https://www.instagram.com/autopro_lifestyle/" target="_blank" class="social-media">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@autoprolifestyle" target="_blank" class="social-media">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+    </div>
+
+</footer>
+
+<div class="footer-bottom">
+    © 2024 AUTOPRO ALL TERRAIN & STREET LIFESTYLE
+</div>
+
+
+<script src="https://kit.fontawesome.com/f50125bc94.js" crossorigin="anonymous"></script>
+
+
+  <script>
+    function showNotification(message) {
+    let notif = document.getElementById('cart-notification');
+    if (!notif) {
+        notif = document.createElement('div');
+        notif.id = 'cart-notification';
+        notif.style.position = 'fixed';
+        notif.style.top = '80px';
+        notif.style.right = '20px';
+        notif.style.padding = '12px 16px';
+        notif.style.backgroundColor = '#4CAF50';
+        notif.style.color = '#fff';
+        notif.style.borderRadius = '8px';
+        notif.style.boxShadow = '0 2px 10px rgba(0,0,0,0.15)';
+        notif.style.zIndex = '9999';
+        notif.style.opacity = '0';
+        notif.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+        notif.style.transform = 'translateY(-10px)';
+        document.body.appendChild(notif);
+    }
+    notif.textContent = message;
+    notif.style.display = 'block';
+    requestAnimationFrame(() => {
+        notif.style.opacity = '1';
+        notif.style.transform = 'translateY(0)';
+    });
+    clearTimeout(window._cartNotificationTimeout);
+    window._cartNotificationTimeout = setTimeout(() => {
+        notif.style.opacity = '0';
+        notif.style.transform = 'translateY(-10px)';
+        setTimeout(() => notif.style.display = 'none', 250);
+    }, 2600);
+}
+function updateCartBadge() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || {};
+    const count = Object.values(cart).reduce((sum, item) => sum + (Number(item.quantity) || 0), 0);
+    const badge = document.getElementById('cart-count');
+    if (!badge) return;
+    if (count > 0) {
+        badge.textContent = count;
+        badge.style.display = 'flex';
+    } else {
+        badge.style.display = 'none';
+    }
+}
+    function generateCartKey(productId, options) {
+        let key = productId;
+        if (options.color) key += '_' + options.color.replace(/\s+/g, '_');
+        if (options.size) key += '_' + options.size.replace(/\s+/g, '_');
+        if (options.model) key += '_' + options.model.replace(/\s+/g, '_');
+        if (options.brand) key += '_' + options.brand.replace(/\s+/g, '_');
+        if (options.description) key += '_' + options.description.replace(/\s+/g, '_');
+        if (options.area) key += '_' + options.area.replace(/\s+/g, '_');
+        if (options.part) key += '_' + options.part.replace(/\s+/g, '_');
+        return key;
+    }
+
+    function validateoption(productId) {
+    const quantityEl = document.getElementById(`quantity-${productId}`);
+    const quantityErr = document.getElementById(`quantity-error-${productId}`);
+
+    if (quantityErr) {
+        quantityErr.textContent = "";
+    }
+
+    let optionValid = true;
+
+    if (quantityEl && quantityErr) {
+        const quantity = Number(quantityEl.value);
+        if (!Number.isInteger(quantity) || quantity < 1) {
+            quantityErr.textContent = "Quantity must be 1 or more.";
+            optionValid = false;
+        } else if (quantity > 50) {
+            quantityErr.textContent = "Maximum Order per product is 50 pcs only. For Bulk Orders, please proceed to contact page.";
+            optionValid = false;
+        }
+    }
+
+    if (optionValid) {
+        
+        const cart = JSON.parse(localStorage.getItem('cart')) || {};
+        const options = {};
+        const cartKey = generateCartKey(productId, options);
+        const item = {
+            productId: productId,
+            quantity: Number(quantityEl.value),
+            color: null,
+            size: null,
+            model: null,
+            brand: null,
+            description: null,
+            area: null,
+            part: null
+        };
+        if (cart[cartKey]) {
+            cart[cartKey].quantity += item.quantity;
+        } else {
+            cart[cartKey] = item;
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartBadge();
+
+        showNotification("Item added to cart!");
+
+        if(quantityEl) {
+            quantityEl.value = "0";
+        }
+        return true;
+    }
+    return false;
+}
+
+function resetoptions(productId) {
+    const quantityErr = document.getElementById(`quantity-error-${productId}`);
+
+    if (quantityErr) {
+        quantityErr.textContent = "";
+    }
+}
+   
+    const sidebar = document.getElementById('sidebar');
+    updateCartBadge();
+    const searchInput = document.getElementById('wheel-search');
+
+    function filterProducts() {
+        const query = (searchInput?.value || '').trim().toLowerCase();
+        const cards = document.querySelectorAll('.flex-product .card');
+        let visibleCount = 0;
+        cards.forEach(card => {
+            const title = card.querySelector('h2')?.textContent.toLowerCase() || '';
+            const details = (card.querySelector('ul')?.textContent || card.querySelector('p')?.textContent || '').toLowerCase();
+            const visible = !query || title.includes(query) || details.includes(query);
+            card.style.display = visible ? '' : 'none';
+            if (visible) visibleCount += 1;
+        });
+        const noResults = document.getElementById('no-results-message');
+        if (noResults) {
+            noResults.hidden = visibleCount > 0;
+        }
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('input', filterProducts);
+        filterProducts();
+    }
+
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const navToggle = document.getElementById('navToggle');
+    const sidebarClose = document.getElementById('sidebarClose');
+
+    function closeSidebar() {
+        sidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+    }
+
+    navToggle.addEventListener('click', () => {
+        sidebar.classList.add('active');
+        sidebarOverlay.classList.add('active');
+    });
+
+    sidebarClose.addEventListener('click', closeSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+  </script>
+
+   
+</body>
+</html>
+

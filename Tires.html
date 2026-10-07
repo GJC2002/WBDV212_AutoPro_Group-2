@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Pro All Terrain & Street Lifestyle - Tires</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+ <body class="page-tires">
+
+ <div class="nav">
+    <img src="./images/companylogo.jpg" alt="Auto Pro Logo" height="100" width="200" style="border-radius: 100%" class="companylogo">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-badge" id="cart-count" style="font-family: Arial, Helvetica, sans-serif;">0</span></a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu">☰</button>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar">
+    <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation menu">×</button>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+        </ul>
+    </nav>
+</aside>
+
+ <br>
+ <h1 style="text-align: center;">Tires</h1>
+ <div class="search-container">
+     <label for="wheel-search">Search tires:</label>
+     <input type="search" id="wheel-search" name="wheel-search" placeholder="Search by tire name, size or feature" aria-label="Search tires products">
+ </div>
+ <div id="no-results-message" class="no-results-message" hidden>No tires found matching your search.</div>
+ <br>
+ <br>
+ 
+ <div class="flex-product">
+
+    <div class="card">
+        <img src="./images/AMP Terrain Attack RT.webp" alt="AMP Terrain Attack RT" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('ampterrainattackrt')" onreset="resetoptions('ampterrainattackrt')">
+        <h2>AMP-TERRAIN ATTACK R/T</h2>
+     <p>Designed to tackle tough terrain while maintaining on-road comfort.</p>
+     <p><em>Note: Items are sold per piece (1 pc)</em></p>
+
+        <label for="size-ampterrainattackrt">Size:</label>
+        <select id="size-ampterrainattackrt">
+            <option value="--select size--">--select size--</option>
+            <option value="265/70/17">265/70/17</option>
+            <option value="285/70/17">285/70/17</option>
+            <option value="285/70/20">285/70/20</option>
+        </select>
+        <span id="size-error-ampterrainattackrt" class="error_message"></span>
+        <label for="quantity-ampterrainattackrt">Quantity:</label>
+        <input type="number" id="quantity-ampterrainattackrt" min="1" max="50" value="0">
+        <span id="quantity-error-ampterrainattackrt" class="error_message"></span>
+        <br>
+        <h3>PHP 16,800.00</h3>
+        <button type="button" onclick="validateoption('ampterrainattackrt')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/AMP Terrain Pro AT eyy.webp" alt="AMP Terrain Attack AT A" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('ampterrainproata')" onreset="resetoptions('ampterrainproata')">
+        <h2>AMP-TERRAIN ATTACK A/T A</h2>
+        <p>Rugged all-terrain tyre built for long tread life and superior traction.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+ <label for="size-ampterrainproata">Size:</label>
+        <select id="size-ampterrainproata">
+            <option value="--select size--">--select size--</option>
+            <option value="265/50/20">265/50/20</option>
+            <option value="265/70/17">265/70/17</option>
+            <option value="275/55/20">275/55/20</option>
+            <option value="285/50/20">285/50/20</option>
+            <option value="285/70/20">285/70/20</option>
+            <option value="305/55/20">305/55/20</option>
+            <option value="315/70/17">315/70/17</option>
+        </select>
+        <span id="size-error-ampterrainproata" class="error_message"></span>
+        <label for="quantity-ampterrainproata">Quantity:</label>
+        <input type="number" id="quantity-ampterrainproata" min="1" max="50" value="0">
+        <span id="quantity-error-ampterrainproata" class="error_message"></span>
+        <br>
+        <h3>PHP 15,000.00</h3>
+        <button type="button" onclick="validateoption('ampterrainproata')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/AMP Terrain Attack AT.webp" alt="Amp-Terrain Attack AT" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('ampterrainattackat')" onreset="resetoptions('ampterrainattackat')">
+        <h2>AMP - TERRAIN PRO A/T P</h2>
+        <p>Engineered for exceptional durability in demanding off-road conditions.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+        <label for="size-ampterrainattackat">Size:</label>
+        <select id="size-ampterrainattackat">
+            <option value="--select size--">--select size--</option>
+            <option value="265/70/17">265/70/17</option>
+            <option value="275/70/18">275/70/18</option>
+            <option value="285/45/22">285/45/22</option>
+            <option value="285/65/18">285/65/18</option>
+            <option value="285/70/17">285/70/17</option>
+        </select>
+        <span id="size-error-ampterrainattackat" class="error_message"></span>
+        <label for="quantity-ampterrainattackat">Quantity:</label>
+        <input type="number" id="quantity-ampterrainattackat" min="1" max="50" value="0">
+        <span id="quantity-error-ampterrainattackat" class="error_message"></span>
+        <br>
+        <h3>PHP 14,000.00</h3>
+        <button type="button" onclick="validateoption('ampterrainattackat')">Add to Cart</button>
+    </div>
+    </div>
+
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="flex-product">
+
+    <div class="card">
+        <img src="./images/AMP Terrain Attack MTa.webp" alt="Amp-Terrain Attack Mta" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('ampterrainattackmta')" onreset="resetoptions('ampterrainattackmta')">
+        <h2>AMP - TERRAIN ATTACK M/T A P</h2>
+    <p>Designed for aggressive off-road performance and confident on-road control.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+
+        <label for="size-ampterrainattackmta">Size:</label>
+        <select id="size-ampterrainattackmta">
+            <option value="--select size--">--select size--</option>
+            <option value="35/11.5/20">35/11.5/20</option>
+            <option value="35/12.5/20">35/12.5/20</option>
+            <option value="285/65/18">285/65/18</option>
+            <option value="305/55/20">305/55/20</option> 
+        </select>
+        <span id="size-error-ampterrainattackmta" class="error_message"></span>
+        <label for="quantity-ampterrainattackmta">Quantity:</label>
+        <input type="number" id="quantity-ampterrainattackmta" min="1" max="50" value="0">
+        <span id="quantity-error-ampterrainattackmta" class="error_message"></span>
+        <br>
+        <h3>PHP 15,400.00</h3>
+        <button type="button" onclick="validateoption('ampterrainattackmta')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/SUMAXX - MAX RACING 86S.webp" alt="SUMAXX Max Racing 86s" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('sumaxxmaxracing86s')" onreset="resetoptions('sumaxxmaxracing86s')">
+        <h2>SUMAXX - MAX RACING 86S</h2>
+        <p>Engineered for confident handling in wet conditions with center tread traction.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+        <label for="size-sumaxxmaxracing86s">Size:</label>
+        <select id="size-sumaxxmaxracing86s">
+            <option value="--select size--">--select size--</option>
+            <option value="245/45/18">245/45/18</option>
+            <option value="255/45/18">255/45/18</option>
+            <option value="255/50/18">255/50/18</option>
+            <option value="255/55/18">255/55/18</option>
+            <option value="265/50/20">265/50/20</option>
+            <option value="265/60/18">265/60/18</option>
+        </select>
+        <span id="size-error-sumaxxmaxracing86s" class="error_message"></span>
+        <label for="quantity-sumaxxmaxracing86s">Quantity:</label>
+        <input type="number" id="quantity-sumaxxmaxracing86s" min="1" max="50" value="0">
+        <span id="quantity-error-sumaxxmaxracing86s" class="error_message"></span>
+        <br>
+        <h3>PHP 6,300.00</h3>
+        <button type="button" onclick="validateoption('sumaxxmaxracing86s')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/SUMAXX - MAX DRIFTING X.webp" alt="SUMAXX Max Drifting X" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('sumaxxmaxdriftingx')" onreset="resetoptions('sumaxxmaxdriftingx')">
+        <h2>SUMAXX - MAX DRIFTING X</h2>
+        <p>Designed to deliver dynamic performance and visual appeal.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+  <label for="size-sumaxxmaxdriftingx">Size:</label>
+        <select id="size-sumaxxmaxdriftingx">
+            <option value="--select size--">--select size--</option>
+            <option value="165/50/15">165/50/15</option>
+            <option value="195/50/15">195/50/15</option>
+            <option value="195/55/15">195/55/15</option>
+            <option value="195/50/16">195/50/16</option>
+            <option value="215/45/17">215/45/17</option>
+            <option value="245/45/18">245/45/18</option>
+        </select>
+        <span id="size-error-sumaxxmaxdriftingx" class="error_message"></span>
+        <label for="quantity-sumaxxmaxdriftingx">Quantity:</label>
+        <input type="number" id="quantity-sumaxxmaxdriftingx" min="1" max="50" value="0">
+        <span id="quantity-error-sumaxxmaxdriftingx" class="error_message"></span>
+        <br>
+        <h3>PHP 3,250.00</h3>
+        <button type="button" onclick="validateoption('sumaxxmaxdriftingx')">Add to Cart</button>
+    </div>
+    </div>
+    
+    </div>
+
+<br>
+    <br>
+    <br>
+  <br>
+     
+    <div class="flex-product">
+
+    <div class="card">
+        <img src="./images/MAXTRECK - MUD TRAC.webp" alt="MAXTRECK Mud Trac" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('maxtreckmudtrac')" onreset="resetoptions('maxtreckmudtrac')">
+        <h2>MAXTREK - MUD TRAC</h2>
+        <p>Superior traction in muddy and slippery conditions with durable construction.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+        <label for="size-maxtreckmudtrac">Size:</label>
+        <select id="size-maxtreckmudtrac">
+            <option value="--select size--">--select size--</option>
+            <option value="265/70/17">265/70/17</option>
+            <option value="285/70/17">285/70/17</option>
+        </select>
+        <span id="size-error-maxtreckmudtrac" class="error_message"></span>
+        <label for="quantity-maxtreckmudtrac">Quantity:</label>
+        <input type="number" id="quantity-maxtreckmudtrac" min="1" max="50" value="0">
+        <span id="quantity-error-maxtreckmudtrac" class="error_message"></span>
+        <br>
+        <h3>PHP 6,000.00</h3>
+        <button type="button" onclick="validateoption('maxtreckmudtrac')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/MAXTREK SU800 AT.webp" alt="MAXTRECK SU800 AT" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('maxtreksu800at')" onreset="resetoptions('maxtreksu800at')">
+        <h2>MAXTRECK SU800 AT</h2>
+        <p>Exceptional durability and performance in demanding off-road conditions.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+        <label for="size-maxtreksu800at">Size:</label>
+        <select id="size-maxtreksu800at">
+            <option value="--select size--">--select size--</option>
+            <option value="215/70/16">215/70/16</option>
+            <option value="265/50/20">265/50/20</option>
+            <option value="265/60/18">265/60/18</option>
+            <option value="265/70/17">265/70/17</option>
+            <option value="275/55/20">275/55/20</option>
+        </select>
+        <span id="size-error-maxtreksu800at" class="error_message"></span>
+        <label for="quantity-maxtreksu800at">Quantity:</label>
+        <input type="number" id="quantity-maxtreksu800at" min="1" max="50" value="0">
+        <span id="quantity-error-maxtreksu800at" class="error_message"></span>
+        <br>
+        <h3>PHP 5,500.00</h3>
+        <button type="button" onclick="validateoption('maxtreksu800at')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/MAXTREK-Maximus M2.webp" alt="MAXTRECK Maximus M2" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('maxtrekmaximusm2')" onreset="resetoptions('maxtrekmaximusm2')">
+        <h2>MAXTREK - MAXIMUS M2</h2>
+        <p>High-performance tire for luxury vehicles balancing comfort and durability.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+        <label for="size-maxtrekmaximusm2">Size:</label>
+        <select id="size-maxtrekmaximusm2">
+            <option value="--select size--">--select size--</option>
+            <option value="205/55/16">205/55/16</option>
+            <option value="205/65/15">205/65/15</option>
+            <option value="205/65/16">205/65/16</option>
+            <option value="215/45/17">215/45/17</option>
+            <option value="215/50/17">215/50/17</option>
+            <option value="215/55/16">215/55/16</option>
+            <option value="215/55/17">215/55/17</option>
+            <option value="215/65/18">215/65/18</option>
+            <option value="225/40/18">225/40/18</option>
+            <option value="225/45/18">225/45/18</option>
+            <option value="225/55/17">225/55/17</option>
+        </select>
+        <span id="size-error-maxtrekmaximusm2" class="error_message"></span>
+        <label for="quantity-maxtrekmaximusm2">Quantity:</label>
+        <input type="number" id="quantity-maxtrekmaximusm2" min="1" max="50" value="0">
+        <span id="quantity-error-maxtrekmaximusm2" class="error_message"></span>
+        <br>
+        <h3>PHP 3,950.00</h3>
+        <button type="button" onclick="validateoption('maxtrekmaximusm2')">Add to Cart</button>
+    </div>
+    </div>
+    
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="flex-product">
+
+    <div class="card">
+        <img src="./images/MAXTREK SU-830.webp" alt="MAXTRECK SU 830" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('maxtreksu830')" onreset="resetoptions('maxtreksu830')">
+        <h2>MAXTREK SU-830</h2>
+        <p>Optimized wear-resistant formula to improve tyre life and reduce long-term cost.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+        <label for="size-maxtreksu830">Size:</label>
+        <select id="size-maxtreksu830">
+            <option value="--select size--">--select size--</option>
+            <option value="185/70/13">185/70/13</option>
+            <option value="205/65/15">205/65/15</option>
+            <option value="215/65/16">215/65/16</option>
+            <option value="205/70/15">205/70/15</option>
+            <option value="215/70/15C">215/70/15C</option>
+        </select>
+        <span id="size-error-maxtreksu830" class="error_message"></span>
+        <label for="quantity-maxtreksu830">Quantity:</label>
+        <input type="number" id="quantity-maxtreksu830" min="1" max="50" value="0">
+        <span id="quantity-error-maxtreksu830" class="error_message"></span>
+        <br>
+        <h3>PHP 3,050.00</h3>
+        <button type="button" onclick="validateoption('maxtreksu830')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/MAXTREK FORTIS T5 HT .webp" alt="MAXTRECK Fortis T5 HT" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('maxtrekfortist5ht')" onreset="resetoptions('maxtrekfortist5ht')">
+        <h2>MAXTRECK Fortis T5 HT</h2>
+        <p>Delivers a smooth, quiet, and stable ride.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+        <label for="size-maxtrekfortist5ht">Size:</label>
+        <select id="size-maxtrekfortist5ht">
+            <option value="--select size--">--select size--</option>
+            <option value="245/35/20">245/35/20</option>
+            <option value="255/45/20">255/45/20</option>
+            <option value="265/40/22">265/40/22</option>
+            <option value="265/45/22">265/45/22</option>
+            <option value="275/55/20">275/55/20</option>
+            <option value="285/45/22">285/45/22</option>
+            <option value="305/40/22">305/40/22</option>
+            <option value="305/45/22">305/45/22</option>
+        </select>
+        <span id="size-error-maxtrekfortist5ht" class="error_message"></span>
+        <label for="quantity-maxtrekfortist5ht">Quantity:</label>
+        <input type="number" id="quantity-maxtrekfortist5ht" min="1" max="50" value="0">
+        <span id="quantity-error-maxtrekfortist5ht" class="error_message"></span>
+        <br>
+        <h3>PHP 6,850.00</h3>
+        <button type="button" onclick="validateoption('maxtrekfortist5ht')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/LENSO - FENIX.webp" alt="LENSO Fenix" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('lensofenix')" onreset="resetoptions('lensofenix')">
+        <h2>LENSO - FENIX</h2>
+        <p>High-performance sport tire for family vehicles balancing comfort and durability.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+        <label for="size-lensofenix">Size:</label>
+        <select id="size-lensofenix">
+            <option value="--select size--">--select size--</option>
+            <option value="245/45/18">245/45/18</option>
+            <option value="255/50/18">255/50/18</option>
+            <option value="265/50/20">265/50/20</option>
+            <option value="265/60/18">265/60/18</option>
+        </select>
+        <span id="size-error-lensofenix" class="error_message"></span>
+        <label for="quantity-lensofenix">Quantity:</label>
+        <input type="number" id="quantity-lensofenix" min="1" max="50" value="0">
+        <span id="quantity-error-lensofenix" class="error_message"></span>
+        <br>
+        <h3>PHP 6,600.00</h3>
+        <button type="button" onclick="validateoption('lensofenix')">Add to Cart</button>
+    </div>
+    </div>
+    
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="flex-product">
+
+    <div class="card">
+        <img src="./images/MAXREK - SIERRA S6.webp" alt="MAXTRECK Sierra S6" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('maxtreksierras6')" onreset="resetoptions('maxtreksierras6')">
+        <h2>MAXREK - SIERRA S6</h2>
+        <p>High-performance tire for off-road enthusiasts with exceptional traction.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+
+        <label for="size-maxtreksierras6">Size:</label>
+        <select id="size-maxtreksierras6">
+            <option value="--select size--">--select size--</option>
+            <option value="225/60/17">225/60/17</option>
+            <option value="225/65/17">225/65/17</option>
+            <option value="235/50/18">235/50/18</option>
+            <option value="235/55/18">235/55/18</option>
+            <option value="235/60/18">235/60/18</option>
+            <option value="235/65/17">235/65/17</option>
+            <option value="255/55/18">255/55/18</option>
+        </select>
+        <span id="size-error-maxtreksierras6" class="error_message"></span>
+        <label for="quantity-maxtreksierras6">Quantity:</label>
+        <input type="number" id="quantity-maxtreksierras6" min="1" max="50" value="0">
+        <span id="quantity-error-maxtreksierras6" class="error_message"></span>
+        <br>
+        <h3>PHP 5,600.00</h3>
+        <button type="button" onclick="validateoption('maxtreksierras6')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/SUMAXX - ALL-TERAIN AT.webp" alt="SUMAXX All Terrain AT" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('sumaxxallterrainat')" onreset="resetoptions('sumaxxallterrainat')">
+        <h2>SUMAXX ALL TERRAIN AT</h2>
+        <p>Engineered for versatility on both on-road and off-road surfaces.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+        <label for="size-sumaxxallterrainat">Size:</label>
+        <select id="size-sumaxxallterrainat">
+            <option value="--select size--">--select size--</option>
+            <option value="175/80/14">175/80/14</option>
+            <option value="205/55/20">205/55/20</option>
+            <option value="235/50/20">235/50/20</option>
+            <option value="245/70/17">245/70/17</option>
+            <option value="285/55/20">285/55/20</option>
+            <option value="305/70/17">305/70/17</option>
+        </select>
+        <span id="size-error-sumaxxallterrainat" class="error_message"></span>
+        <label for="quantity-sumaxxallterrainat">Quantity:</label>
+        <input type="number" id="quantity-sumaxxallterrainat" min="1" max="50" value="0">
+        <span id="quantity-error-sumaxxallterrainat" class="error_message"></span>
+        <br>
+        <h3>PHP 6,350.00</h3>
+        <button type="button" onclick="validateoption('sumaxxallterrainat')">Add to Cart</button>
+    </div>
+    </div>
+
+    <div class="card">
+        <img src="./images/MAXTREK - MAXIMUS DS501.webp" alt="MAXTREK Maximus DS501" height="100" width="200">
+    <div class="card-container" onsubmit="return validateoption('maxtrekmaximusds501')" onreset="resetoptions('maxtrekmaximusds501')">
+        <h2>MAXTREK - MAXIMUS DS501</h2>
+        <p>Special tire formula with contoured and directional pattern design.</p>
+        <p><em>Note: Items are sold per piece (1 pc)</em></p>
+        <label for="size-maxtrekmaximusds501">Size:</label>
+        <select id="size-maxtrekmaximusds501">
+            <option value="--select size--">--select size--</option>
+            <option value="195/50/15">195/50/15</option>
+            <option value="195/55/15">195/55/15</option>
+        </select>
+        <span id="size-error-maxtrekmaximusds501" class="error_message"></span>
+        <label for="quantity-maxtrekmaximusds501">Quantity:</label>
+        <input type="number" id="quantity-maxtrekmaximusds501" min="1" max="50" value="0">
+        <span id="quantity-error-maxtrekmaximusds501" class="error_message"></span>
+        <br>
+        <h3>PHP 6,100.00</h3>
+        <button type="button" onclick="validateoption('maxtrekmaximusds501')">Add to Cart</button>
+    </div>
+    </div>
+    
+    </div>
+  </div>
+
+  <footer class="footer">
+
+    <div class="footer-left">
+        <h2>AUTOPRO</h2>
+        <p>All Terrain & Street Lifestyle</p>
+    </div>
+
+    <div class="footer-center">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Products.html">Products</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+        <a href="faq.html">FAQ</a>
+    </div>
+
+    <div class="footer-right" style="display:flex; flex-direction:row !important; justify-content:center; gap:25px; align-items:center;">
+
+        <a href="https://www.facebook.com/autoprolifestyle" target="_blank" class="social-media">
+            <i class="fa-brands fa-square-facebook"></i>
+        </a>
+
+        <a href="https://www.instagram.com/autopro_lifestyle/" target="_blank" class="social-media">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@autoprolifestyle" target="_blank" class="social-media">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+    </div>
+
+</footer>
+
+<div class="footer-bottom">
+    © 2024 AUTOPRO ALL TERRAIN & STREET LIFESTYLE
+</div>
+
+
+<script src="https://kit.fontawesome.com/f50125bc94.js" crossorigin="anonymous"></script>
+
+
+    <script>
+   function showNotification(message) {
+        let notif = document.getElementById('cart-notification');
+        if (!notif) {
+            notif = document.createElement('div');
+            notif.id = 'cart-notification';
+            notif.style.position = 'fixed';
+            notif.style.top = '80px';
+            notif.style.right = '20px';
+            notif.style.padding = '12px 16px';
+            notif.style.backgroundColor = '#4CAF50';
+            notif.style.color = '#fff';
+            notif.style.borderRadius = '8px';
+            notif.style.boxShadow = '0 2px 10px rgba(0,0,0,0.15)';
+            notif.style.zIndex = '9999';
+            notif.style.opacity = '0';
+            notif.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+            notif.style.transform = 'translateY(-10px)';
+            document.body.appendChild(notif);
+        }
+        notif.textContent = message;
+        notif.style.display = 'block';
+        requestAnimationFrame(() => {
+            notif.style.opacity = '1';
+            notif.style.transform = 'translateY(0)';
+        });
+        clearTimeout(window._cartNotificationTimeout);
+        window._cartNotificationTimeout = setTimeout(() => {
+            notif.style.opacity = '0';
+            notif.style.transform = 'translateY(-10px)';
+            setTimeout(() => notif.style.display = 'none', 250);
+        }, 2600);
+    }
+
+function updateCartBadge() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || {};
+    const count = Object.values(cart).reduce((sum, item) => sum + (Number(item.quantity) || 0), 0);
+    const badge = document.getElementById('cart-count');
+    if (!badge) return;
+    if (count > 0) {
+        badge.textContent = count;
+        badge.style.display = 'flex';
+    } else {
+        badge.style.display = 'none';
+    }
+}
+
+   function generateCartKey(productId, options) {
+        let key = productId;
+        if (options.color) key += '_' + options.color.replace(/\s+/g, '_');
+        if (options.size) key += '_' + options.size.replace(/\s+/g, '_');
+        if (options.model) key += '_' + options.model.replace(/\s+/g, '_');
+        if (options.brand) key += '_' + options.brand.replace(/\s+/g, '_');
+        if (options.description) key += '_' + options.description.replace(/\s+/g, '_');
+        if (options.area) key += '_' + options.area.replace(/\s+/g, '_');
+        if (options.part) key += '_' + options.part.replace(/\s+/g, '_');
+        return key;
+    }
+
+   function getSelectValues(selectEl, ignoreValues = []) {
+    if (!selectEl) return null;
+    return Array.from(selectEl.options)
+        .map(option => option.value)
+        .filter(value => value && !ignoreValues.includes(value));
+}
+
+   function validateoption(productID){
+   const sizeEl = document.getElementById(`size-${productID}`);
+   const sizeErr = document.getElementById(`size-error-${productID}`);
+   const quantityEl = document.getElementById(`quantity-${productID}`);
+   const quantityErr = document.getElementById(`quantity-error-${productID}`);
+   if (sizeErr) {
+    sizeErr.textContent = "";
+   }
+   if (quantityErr) {
+    quantityErr.textContent = "";
+   }
+
+  let optionValid = true;
+
+if(sizeEl && sizeErr) {
+    const size = sizeEl.value;
+    if(size ==="--select size--" || size.trim() === "") {
+        sizeErr.textContent = "Please select a size.";
+        optionValid = false;
+    }
+}
+
+if(quantityEl && quantityErr) {
+    const quantity = Number(quantityEl.value);
+    if(!Number.isInteger(quantity) || quantity < 1) {
+        quantityErr.textContent = "Quantity must be 1 or more.";
+        optionValid = false;
+    } else if (quantity > 50) {
+        quantityErr.textContent = "Maximum Order per product is 50 pcs only. For Bulk Orders, please proceed to contact page.";
+        optionValid = false;
+    }
+}
+if(optionValid) {
+    
+    const cart = JSON.parse(localStorage.getItem('cart')) || {};
+    const options = {
+        size: sizeEl ? sizeEl.value : null
+    };
+    const cartKey = generateCartKey(productID, options);
+    const item = {
+        productId: productID,
+        quantity: Number(quantityEl.value),
+        color: null,
+        size: sizeEl ? sizeEl.value : null,
+        model: null,
+        brand: null,
+        description: null,
+        area: null,
+        part: null,
+        colorOptions: null,
+        sizeOptions: getSelectValues(sizeEl, ['--select size--']),
+        modelOptions: null,
+        brandOptions: null,
+        descriptionOptions: null,
+        areaOptions: null,
+        partOptions: null
+    };
+    if (cart[cartKey]) {
+        cart[cartKey].quantity += item.quantity;
+    } else {
+        cart[cartKey] = item;
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartBadge();
+
+    showNotification("Item added to cart!");
+
+    if(sizeEl) {
+        sizeEl.value = "--select size--";
+    }
+    if(quantityEl) {
+        quantityEl.value = "0";
+    }
+    return true;
+}
+return false;
+}
+function resetoptions(productID) {
+    const sizeErr = document.getElementById(`size-error-${productID}`);
+    const quantityErr = document.getElementById(`quantity-error-${productID}`);
+    if (sizeErr) {
+        sizeErr.textContent = "";
+    }
+    if (quantityErr) {
+        quantityErr.textContent = "";
+    }
+
+}
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const navToggle = document.getElementById('navToggle');
+        const sidebarClose = document.getElementById('sidebarClose');
+        function closeSidebar() {
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+        }
+        navToggle.addEventListener('click', () => {
+            sidebar.classList.add('active');
+            sidebarOverlay.classList.add('active');
+        });
+        sidebarClose.addEventListener('click', closeSidebar);
+        sidebarOverlay.addEventListener('click', closeSidebar);
+    updateCartBadge();
+    const searchInput = document.getElementById('wheel-search');
+
+    function filterProducts() {
+        const query = (searchInput?.value || '').trim().toLowerCase();
+        const cards = document.querySelectorAll('.flex-product .card');
+        let visibleCount = 0;
+        cards.forEach(card => {
+            const title = card.querySelector('h2')?.textContent.toLowerCase() || '';
+            const details = (card.querySelector('ul')?.textContent || card.querySelector('p')?.textContent || '').toLowerCase();
+            const visible = !query || title.includes(query) || details.includes(query);
+            card.style.display = visible ? '' : 'none';
+            if (visible) visibleCount += 1;
+        });
+        const noResults = document.getElementById('no-results-message');
+        if (noResults) {
+            noResults.hidden = visibleCount > 0;
+        }
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('input', filterProducts);
+        filterProducts();
+    }
+    </script>
+   
+</body>
+</html>
+

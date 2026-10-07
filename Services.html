@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Pro All Terrain & Street Lifestyle - Services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">    
+</head>
+
+<body class="page-services">
+    <div class="nav">
+        <img src="./images/companylogo.jpg" alt="Auto Pro Logo" height="100" width="200" style="border-radius: 100%" class="companylogo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Products.html">Products</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-badge" id="cart-count" style="font-family: Arial, Helvetica, sans-serif;">0</span></a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Open navigation menu">☰</button>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation menu">×</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+            </ul>
+        </nav>
+    </aside>
+    
+
+    
+    <div class="services-header">
+        <h1>Book Your Appointment</h1>
+        <span class="services-title-underline"></span>
+        <p>Choose a service and schedule a visit — we'll take care of the rest.</p>
+    </div>
+
+   
+    <div class="services-cards">
+        <div class="service-card">
+            <i class="fas fa-tools"></i>
+            <h3>Periodic Maintenance</h3>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-wrench"></i>
+            <h3>Mechanical</h3>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-oil-can"></i>
+            <h3>Change Oil</h3>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>OBD Scanning</h3>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-ellipsis-h"></i>
+            <h3>Others</h3>
+        </div>
+    </div>
+
+   
+    <div class="services-form-section">
+        <h2>Your Details</h2>
+        <div class="form-card">
+            <form name="RegForm" onsubmit="return validateform()" onreset="resetErrors()">
+                <p>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="FName" placeholder="Enter First Name" oninput="filterNameInput(event)"/>
+                    <span id="fname-error" class="error_message"></span>
+                </p>
+                <p>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="LName" placeholder="Enter Last Name" oninput="filterNameInput(event)"/>
+                    <span id="lname-error" class="error_message"></span>
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="EMail" placeholder="Enter Email" oninput="validateEmail()"/>
+                    <span id="email-error" class="error_message"></span>
+                    <span id="email-success" class="success_message"></span>
+                </p>
+                <p>
+                    <label for="contact_num">Phone Number</label>
+                    <input type="tel" id="contact_num" class="phone-input" name="Contact_num" placeholder="09XXXXXXXXX" inputmode="numeric" pattern="09[0-9]{9}" maxlength="11" onkeydown="return allowOnlyDigits(event)" oninput="filterNumberInput(event); validatePhoneNumber()" onpaste="filterPhonePaste(event)"/>
+                    <span id="contact_num-error" class="error_message"></span>
+                    <span id="contact_num-success" class="success_message"></span>
+                </p>
+
+                <p><label>Select Services</label></p>
+                <div class="services-check-group">
+                    <label class="service-option">
+                        <input type="checkbox" name="services" value="periodic maintenance"> Periodic Maintenance
+                    </label>
+                    <label class="service-option">
+                        <input type="checkbox" name="services" value="mechanical"> Mechanical
+                    </label>
+                    <label class="service-option">
+                        <input type="checkbox" name="services" value="change oil"> Change Oil
+                    </label>
+                    <label class="service-option">
+                        <input type="checkbox" name="services" value="obd scanning"> OBD Scanning
+                    </label>
+                    <label class="service-option">
+                        <input type="checkbox" id="others-checkbox" name="services" value="others"> Others
+                        <input type="text" id="others-text" name="services-other" placeholder="Please specify other services">
+                    </label>
+                </div>
+                <span id="services-error" class="error_message"></span>
+
+                <div class="schedule-field">
+                    <span class="schedule-label">Book Schedule</span>
+                    <div class="schedule-picker">
+                        <div class="schedule-calendar-header">
+                            <button type="button" id="schedule-prev" aria-label="Previous month">‹</button>
+                            <h3 id="schedule-month" aria-live="polite"></h3>
+                            <button type="button" id="schedule-next" aria-label="Next month">›</button>
+                        </div>
+                        <div class="schedule-weekdays" aria-hidden="true">
+                            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+                            <span>Thu</span><span>Fri</span><span>Sat</span>
+                        </div>
+                        <div class="schedule-calendar" id="schedule-calendar" role="group" aria-label="Choose an appointment date"></div>
+                        <label for="schedule-time">Appointment time</label>
+                        <input type="time" id="schedule-time" min="10:00" max="17:30" step="60" disabled/>
+                        <p class="schedule-hint" id="schedule-hint" aria-live="polite">Select an available date. Sundays and Philippine national holidays are unavailable; additional proclaimed holidays are included for 2026.</p>
+                    </div>
+                    <input type="hidden" id="schedule" name="Schedule"/>
+                    <span id="schedule-error" class="error_message"></span>
+                </div>
+
+                <p>
+                    <input type="submit" value="Send" name="Submit"/>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <h2>AUTOPRO</h2>
+            <p>All Terrain & Street Lifestyle</p>
+        </div>
+        <div class="footer-center">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="Products.html">Products</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact.html">Contact</a>
+        <a href="cart.html">Cart</a>
+        <a href="faq.html">FAQ</a>
+    </div>
+        <div class="footer-right" style="display:flex; flex-direction:row !important; justify-content:center; gap:25px; align-items:center;">
+            <a href="https://www.facebook.com/autoprolifestyle" target="_blank" class="social-media">
+                <i class="fa-brands fa-square-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/autopro_lifestyle/" target="_blank" class="social-media">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.tiktok.com/@autoprolifestyle" target="_blank" class="social-media">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+        </div>
+    </footer>
+
+    <div class="footer-bottom">
+        © 2024 AUTOPRO ALL TERRAIN & STREET LIFESTYLE
+    </div>
+
+    <script src="https://kit.fontawesome.com/f50125bc94.js" crossorigin="anonymous"></script>
+
+    <script>
+        const phonePattern = /^09\d{9}$/;
+
+        function validatePhoneNumber() {
+            const contactNum = document.getElementById("contact_num").value;
+            const contactNumInput = document.getElementById("contact_num");
+            const contactNumERR = document.getElementById("contact_num-error");
+            const contactSuccess = document.getElementById("contact_num-success");
+            contactNumERR.textContent = "";
+            contactSuccess.textContent = "";
+            contactNumInput.classList.remove("phone-valid", "phone-invalid");
+            if (contactNum === "") return;
+            if (phonePattern.test(contactNum)) {
+                contactNumInput.classList.add("phone-valid");
+                contactSuccess.textContent = "✓ Valid phone number";
+                contactNumInput.style.borderColor = "#4CAF50";
+            } else {
+                contactNumInput.classList.add("phone-invalid");
+                contactNumERR.textContent = "Please enter a valid 11-digit phone number starting with 09.";
+                contactNumInput.style.borderColor = "#f44336";
+            }
+        }
+
+        function allowOnlyDigits(event) {
+            const allowedKeys = ["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Tab", "Home", "End"];
+            if (allowedKeys.includes(event.key)) return true;
+            if (/^[0-9]$/.test(event.key)) return true;
+            event.preventDefault();
+            return false;
+        }
+
+        function filterPhonePaste(event) {
+            const pasteValue = (event.clipboardData || window.clipboardData).getData('text');
+            if (!/^\d*$/.test(pasteValue)) {
+                event.preventDefault();
+                const cleaned = pasteValue.replace(/\D/g, '');
+                const input = event.target;
+                const start = input.selectionStart;
+                const end = input.selectionEnd;
+                const newValue = input.value.slice(0, start) + cleaned + input.value.slice(end);
+                input.value = newValue.slice(0, input.maxLength);
+                validatePhoneNumber();
+            }
+        }
+
+        const emailPattern = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        function validateEmail() {
+            const email = document.getElementById("email").value;
+            const emailInput = document.getElementById("email");
+            const emailERR = document.getElementById("email-error");
+            const emailSuccess = document.getElementById("email-success");
+            emailERR.textContent = "";
+            emailSuccess.textContent = "";
+            emailInput.classList.remove("email-valid", "email-invalid");
+            if (email === "") return;
+            if (emailPattern.test(email)) {
+                emailInput.classList.add("email-valid");
+                emailSuccess.textContent = "✓ Valid email";
+                emailInput.style.borderColor = "#4CAF50";
+            } else {
+                emailInput.classList.add("email-invalid");
+                emailERR.textContent = "Please enter a valid email address (e.g., user@example.com)";
+                emailInput.style.borderColor = "#f44336";
+            }
+        }
+
+        function filterNameInput(event) { event.target.value = event.target.value.replace(/\d/g, ''); }
+        function filterNumberInput(event) { event.target.value = event.target.value.replace(/[^0-9]/g, ''); }
+
+        function validateform() {
+            const fname = document.getElementById("fname").value;
+            const lname = document.getElementById("lname").value;
+            const email = document.getElementById("email").value;
+            const contact_num = document.getElementById("contact_num").value;
+            const services = document.querySelectorAll('input[name="services"]:checked');
+            const othersCheckbox = document.getElementById("others-checkbox");
+            const othersText = document.getElementById("others-text");
+            const schedule = document.getElementById("schedule").value;
+
+            const fnameERR = document.getElementById("fname-error");
+            const lnameERR = document.getElementById("lname-error");
+            const emailERR = document.getElementById("email-error");
+            const contact_num_ERR = document.getElementById("contact_num-error");
+            const servicesERR = document.getElementById("services-error");
+            const scheduleERR = document.getElementById("schedule-error");
+
+            [fnameERR, lnameERR, emailERR, contact_num_ERR, servicesERR, scheduleERR].forEach(e => e.textContent = "");
+
+            let inputValid = true;
+
+            if (fname === "" || /\d/.test(fname)) { fnameERR.textContent = "Please Enter Your First Name."; inputValid = false; }
+            if (lname === "" || /\d/.test(lname)) { lnameERR.textContent = "Please Enter Your Last Name."; inputValid = false; }
+            if (email === "" || !email.includes("@") || !email.includes(".")) { emailERR.textContent = "Please enter a valid email address."; inputValid = false; }
+            if (contact_num === "" || !phonePattern.test(contact_num)) { contact_num_ERR.textContent = "Please enter a valid 11-digit phone number starting with 09."; inputValid = false; }
+            if (services.length === 0) { servicesERR.textContent = "Please select at least one service."; inputValid = false; }
+            else if (othersCheckbox.checked && othersText.value.trim() === "") { servicesERR.textContent = "Please specify the 'others' service."; inputValid = false; }
+            if (schedule === "" || !validateScheduleValue(schedule)) { scheduleERR.textContent = "Please select a valid schedule between 10:00 AM and 05:30 PM."; inputValid = false; }
+
+            if (inputValid) { alert("We are processing your request. We will notify you in your email."); return true; }
+            return false;
+        }
+
+        const othersCheckbox = document.getElementById("others-checkbox");
+        const othersText = document.getElementById("others-text");
+        othersText.disabled = true;
+        othersCheckbox.addEventListener("change", () => {
+            othersText.disabled = !othersCheckbox.checked;
+            if (!othersCheckbox.checked) othersText.value = "";
+        });
+
+        function resetErrors() {
+            ["fname-error","lname-error","email-error","contact_num-error","services-error","schedule-error"].forEach(id => {
+                document.getElementById(id).textContent = "";
+            });
+            document.getElementById("contact_num").classList.remove("phone-valid","phone-invalid");
+            document.getElementById("email").classList.remove("email-valid","email-invalid");
+        }
+
+        function formatToLocalDateTime(value) {
+            const y = value.getFullYear(), m = String(value.getMonth()+1).padStart(2,'0'),
+                  d = String(value.getDate()).padStart(2,'0'), h = String(value.getHours()).padStart(2,'0'),
+                  min = String(value.getMinutes()).padStart(2,'0');
+            return `${y}-${m}-${d}T${h}:${min}`;
+        }
+
+        function getScheduleMin() {
+            const now = new Date();
+            const earliest = new Date(now); earliest.setHours(10,0,0,0);
+            const latest = new Date(now); latest.setHours(17,30,0,0);
+            let next = new Date(now);
+            if (next < earliest) { next = earliest; }
+            else { next.setSeconds(0,0); if (now.getSeconds()>0) next.setMinutes(next.getMinutes()+1); }
+            if (next > latest) { next = new Date(now); next.setDate(now.getDate()+1); next.setHours(10,0,0,0); }
+            return formatToLocalDateTime(next);
+        }
+
+        function parseLocalDateTime(value) {
+            const [dp, tp] = value.split('T');
+            const [y,mo,d] = dp.split('-').map(Number);
+            const [h,mi] = tp.split(':').map(Number);
+            return new Date(y, mo-1, d, h, mi, 0, 0);
+        }
+
+        function validateScheduleValue(value) {
+            if (!/^\d{4}-\d{2}-\d{2}T(?:[01]\d|2[0-3]):[0-5]\d$/.test(value)) return false;
+            const s = parseLocalDateTime(value);
+            if (formatToLocalDateTime(s) !== value) return false;
+            if (s < new Date()) return false;
+            if (isUnavailableScheduleDate(s)) return false;
+            const h = s.getHours(), m = s.getMinutes();
+            if (h<10||h>17||(h===17&&m>30)) return false;
+            return true;
+        }
+
+        function formatDateKey(date) {
+            return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
+        }
+
+        function getEasterSunday(year) {
+            const a = year % 19, b = Math.floor(year / 100), c = year % 100;
+            const d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25);
+            const g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30;
+            const i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7;
+            const m = Math.floor((a + 11 * h + 22 * l) / 451);
+            const month = Math.floor((h + l - 7 * m + 114) / 31);
+            const day = (h + l - 7 * m + 114) % 31 + 1;
+            return new Date(year, month - 1, day);
+        }
+
+        function getPhilippineHolidays(year) {
+            const holidays = new Map([
+                [`${year}-01-01`, "New Year's Day"],
+                [`${year}-04-09`, "Araw ng Kagitingan"],
+                [`${year}-05-01`, "Labor Day"],
+                [`${year}-06-12`, "Independence Day"],
+                [`${year}-08-21`, "Ninoy Aquino Day"],
+                [`${year}-11-01`, "All Saints' Day"],
+                [`${year}-11-30`, "Bonifacio Day"],
+                [`${year}-12-08`, "Feast of the Immaculate Conception"],
+                [`${year}-12-25`, "Christmas Day"],
+                [`${year}-12-30`, "Rizal Day"]
+            ]);
+            const easter = getEasterSunday(year);
+            [
+                [-3, "Maundy Thursday"],
+                [-2, "Good Friday"],
+                [-1, "Black Saturday"]
+            ].forEach(([offset, name]) => {
+                const date = new Date(easter);
+                date.setDate(date.getDate() + offset);
+                holidays.set(formatDateKey(date), name);
+            });
+
+            const nationalHeroesDay = new Date(year, 7, 31);
+            while (nationalHeroesDay.getDay() !== 1) nationalHeroesDay.setDate(nationalHeroesDay.getDate() - 1);
+            holidays.set(formatDateKey(nationalHeroesDay), "National Heroes Day");
+
+            if (year === 2026) {
+                // Annual proclamations add dates that are not fixed by recurring holiday rules.
+                [
+                    ["2026-02-17", "Chinese New Year"],
+                    ["2026-03-20", "Eid'l Fitr"],
+                    ["2026-05-27", "Eid'l Adha"],
+                    ["2026-08-31", "National Heroes Day"],
+                    ["2026-11-02", "All Souls' Day"],
+                    ["2026-12-24", "Christmas Eve"],
+                    ["2026-12-31", "Last Day of the Year"]
+                ].forEach(([date, name]) => holidays.set(date, name));
+            }
+            return holidays;
+        }
+
+        function isUnavailableScheduleDate(date) {
+            return date.getDay() === 0 || getPhilippineHolidays(date.getFullYear()).has(formatDateKey(date));
+        }
+
+        const scheduleCalendar = document.getElementById("schedule-calendar");
+        const scheduleMonth = document.getElementById("schedule-month");
+        const scheduleTime = document.getElementById("schedule-time");
+        const scheduleHint = document.getElementById("schedule-hint");
+        const scheduleValue = document.getElementById("schedule");
+        const scheduleMin = getScheduleMin();
+        const earliestScheduleDate = scheduleMin.slice(0, 10);
+        let displayedScheduleMonth = new Date();
+        displayedScheduleMonth = new Date(displayedScheduleMonth.getFullYear(), displayedScheduleMonth.getMonth(), 1);
+        let selectedScheduleDate = "";
+
+        function renderScheduleCalendar() {
+            const year = displayedScheduleMonth.getFullYear();
+            const month = displayedScheduleMonth.getMonth();
+            scheduleMonth.textContent = displayedScheduleMonth.toLocaleDateString("en-PH", { month: "long", year: "numeric" });
+            scheduleCalendar.replaceChildren();
+            const firstWeekday = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const minimumMonth = new Date(earliestScheduleDate + "T00:00:00");
+            document.getElementById("schedule-prev").disabled =
+                year < minimumMonth.getFullYear() || (year === minimumMonth.getFullYear() && month <= minimumMonth.getMonth());
+
+            for (let blank = 0; blank < firstWeekday; blank++) {
+                const spacer = document.createElement("span");
+                spacer.className = "schedule-calendar-spacer";
+                spacer.setAttribute("aria-hidden", "true");
+                scheduleCalendar.appendChild(spacer);
+            }
+
+            const holidays = getPhilippineHolidays(year);
+            for (let day = 1; day <= daysInMonth; day++) {
+                const date = new Date(year, month, day);
+                const dateKey = formatDateKey(date);
+                const holidayName = holidays.get(dateKey);
+                const unavailable = dateKey < earliestScheduleDate || date.getDay() === 0 || Boolean(holidayName);
+                const button = document.createElement("button");
+                button.type = "button";
+                button.className = "schedule-day";
+                button.textContent = String(day);
+                button.disabled = unavailable;
+                button.setAttribute("aria-label", holidayName ? `${date.toLocaleDateString("en-PH", { dateStyle: "full" })}, ${holidayName}` : date.toLocaleDateString("en-PH", { dateStyle: "full" }));
+                if (holidayName) {
+                    button.title = holidayName;
+                    button.classList.add("schedule-holiday");
+                }
+                if (dateKey === selectedScheduleDate) {
+                    button.classList.add("selected");
+                    button.setAttribute("aria-pressed", "true");
+                } else {
+                    button.setAttribute("aria-pressed", "false");
+                }
+                button.addEventListener("click", () => selectScheduleDate(dateKey));
+                scheduleCalendar.appendChild(button);
+            }
+        }
+
+        function selectScheduleDate(dateKey) {
+            selectedScheduleDate = dateKey;
+            scheduleTime.disabled = false;
+            scheduleTime.min = dateKey === earliestScheduleDate ? scheduleMin.slice(11, 16) : "10:00";
+            if (!scheduleTime.value || scheduleTime.value < scheduleTime.min || scheduleTime.value > "17:30") {
+                scheduleTime.value = scheduleTime.min;
+            }
+            updateScheduleValue();
+            const holiday = getPhilippineHolidays(Number(dateKey.slice(0, 4))).get(dateKey);
+            scheduleHint.textContent = holiday ? `${holiday} is unavailable.` : `Selected ${new Date(`${dateKey}T00:00:00`).toLocaleDateString("en-PH", { dateStyle: "long" })}. Choose a time from 10:00 AM to 5:30 PM.`;
+            renderScheduleCalendar();
+        }
+
+        function updateScheduleValue() {
+            scheduleValue.value = selectedScheduleDate && scheduleTime.value
+                ? `${selectedScheduleDate}T${scheduleTime.value}`
+                : "";
+        }
+
+        document.getElementById("schedule-prev").addEventListener("click", () => {
+            displayedScheduleMonth.setMonth(displayedScheduleMonth.getMonth() - 1);
+            renderScheduleCalendar();
+        });
+        document.getElementById("schedule-next").addEventListener("click", () => {
+            displayedScheduleMonth.setMonth(displayedScheduleMonth.getMonth() + 1);
+            renderScheduleCalendar();
+        });
+        scheduleTime.addEventListener("change", updateScheduleValue);
+        renderScheduleCalendar();
+
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
+        const navToggle = document.getElementById('navToggle');
+        const sidebarClose = document.getElementById('sidebarClose');
+
+        function updateCartBadge() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || {};
+            const count = Object.values(cart).reduce((sum, item) => sum + (Number(item.quantity)||0), 0);
+            const badge = document.getElementById('cart-count');
+            if (!badge) return;
+            badge.textContent = count;
+            badge.style.display = count > 0 ? 'flex' : 'none';
+        }
+        updateCartBadge();
+
+        function closeSidebar() { sidebar.classList.remove('active'); sidebarOverlay.classList.remove('active'); }
+        navToggle.addEventListener('click', () => { sidebar.classList.add('active'); sidebarOverlay.classList.add('active'); });
+        sidebarClose.addEventListener('click', closeSidebar);
+        sidebarOverlay.addEventListener('click', closeSidebar);
+    </script>
