@@ -1,14 +1,13 @@
-# WBDV111_MidtermLabExam_Team_4k__Grippers
-Team 4k Grippers
+# WBDV212_Group 2
 
-Group/Members: Gerard James Thomas G. Cruz(Leader), Basty L. Rico, Ricardo Jr I. Manzano, Jhon Charl M. Garcia
 
-Course/Section: BSIT 1-Y2-1
+Group/Members: Gerard James Thomas G. Cruz(Project Manager), Jhon Charl M. Garcia(QA / Presentor), Jimwell Alicaway(Front-End), Jhade Rhya Ferandez (Back-End)
+
+Course/Section: BSIT 2-Y1-3
 
 # Project Description: This business is a retail and automotive/car services that offer and sell car gears and accessories such as branded mags and tires for cars that can also be customized, steel bumpers that are used for offroad, light accessories and car seats. They also cater car services such as the periodic maintenance like change oil, pre-cleaning, mechanical, transmission, and under chassis. It has a physical store located in San Isidro, Cainta, Rizal and it also cater and serve products nationwide. There main customer are from 18 years old and above, their customer includes families, regular people employed or customer, professionals and even politicians and celebrities. They want a website because compared to the social media, customers can only see the latest products and unlike in the website, customer can see not only the latest product but also the previous models of that product, as they can select the type of product they want to check or look for.
 
-# Features implemented: Multiple webpages, static website, we also used javascript in the forms to add logic and interactivity, google fonts and the designs are intended to attract the users with appealing fonts and color that are pleasing to the eyes. 
-*Note: all the features shown below are for visuals only via screenshots.
+# Features implemented: Multiple webpages, static website, we also used javascript in the forms to add logic and interactivity, google fonts and the designs are intended to attract the users with appealing fonts and color that are pleasing to the eyes. For The Backend Functionaliy, we also used PHP and PHPMyadmin to administer MySQL and MariaDB databases through a browser interface. Also Login/Registration to authenticate users, personalize their experience, and securely manage data through a database.
 
 Index/Homepage section:
 <img width="1872" height="899" alt="Screenshot (2359)" src="https://github.com/user-attachments/assets/6fba537e-285a-41b5-b014-368f072880e1" />
