@@ -217,7 +217,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-height: 450px;
+  min-height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: center;
